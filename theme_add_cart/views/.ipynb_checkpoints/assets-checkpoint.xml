@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<template id="assets_theme_cart" inherit_id="website.assets_frontend">
+    		<xpath expr="." position="inside">
+
+                <!--============================================= Style =============================================-->
+
+                <link href="/theme_add_cart/static/less/add_cart.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_add_cart/static/less/font.less" rel="stylesheet" type="text/less"/>
+
+            </xpath>
+    	</template>
+</data>
+</odoo>
