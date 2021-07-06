@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2017-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL: https://store.webkul.com/license.html/ -->
+
+<odoo>
+    <data>
+
+        <record id="view_website_config_settings" model="ir.ui.view">
+            <field name="name">website.config.settings.view.form.inherit.tagmanager</field>
+            <field name="model">website.config.settings</field>
+            <field name="priority" eval="20"/>
+            <field name="inherit_id" ref="website.view_website_config_settings"/>
+            <field name="arch" type="xml">
+                <field name="website_name" position="after">
+                    <label for="google_tagmanager_key"/>
+                    <div name="google_tagmanager_key">
+                        <div>
+                            <div name="google_tagmanager_key" class="oe_inline">
+                                <field name="google_tagmanager_key" placeholder="GTM-XXXXXXX"/>
+                                <a href="https://support.google.com/tagmanager/answer/6103696?hl=en"
+                                        class="oe_link fa fa-arrow-right" target="_blank">
+                                    How to get my Google Tag Manager container ID
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
