@@ -36,7 +36,6 @@
                             <field name="store_mob" placeholder="Mobile Number" />
                             <field name="store_fax" placeholder="Fax Number" />
                             <field name="store_email" placeholder="email:abc@xyz.com" />
-                            <field name="sale_shop_category_id" options="{'no_create_edit': True}"/>
                         </group>
                     </group>
                     <group name="coordinates">
@@ -65,6 +64,14 @@
         </field>
     </record>
 
-    <menuitem id="sale_shop.wk_shop_menu" name="Store" parent="sales_team.menu_sale_config" action="sale_shop.wk_sale_shop_action" sequence="5" />
+    <record id="sale_shop.wk_sale_shop_action" model="ir.actions.act_window">
+        <field name="name">Stores</field>
+        <field name="res_model">sale.shop</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sale_shop.wk_sale_shop_tree" />
+    </record>
+
+    <menuitem id="sale_shop.wk_store_shop_menu" name="Stores" parent="sale.menu_sale_config" action="sale_shop.wk_sale_shop_action" sequence="5" />
 
 </odoo>

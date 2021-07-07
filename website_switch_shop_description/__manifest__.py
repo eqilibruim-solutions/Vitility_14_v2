@@ -2,7 +2,7 @@
 {
     # Module info
     'name': 'Website Switch Shop Description add fields',
-    'version': '14.0.1.0',
+    'version': '1.3.3',
     'category': 'website',
     'sequence': 1,
     'summary': 'Switch the description of the shop for product and add fields for product.',
@@ -13,7 +13,7 @@
     'website': 'https://www.businessagilitymasters.com',
 
     # Dependencies
-    'depends': ['website_sale', ],
+    'depends': ['base','website_sale', 'theme_impacto', 'website_product_videos'],
 
     # Views
     'data': [

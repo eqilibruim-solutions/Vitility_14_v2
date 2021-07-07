@@ -6,19 +6,21 @@
 ################################################################################
 
 import json
-import urllib
+import requests
 
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError
 
 
 def map_geo_find(addr):
-    url = 'https://maps.googleapis.com/maps/api/geocode/json?sensor=false&address='
-    url += urllib.quote(addr.encode('utf8'))
+    if not addr:
+        return None
+    url = 'https://maps.googleapis.com/maps/api/geocode/json'
     try:
-        result = json.load(urllib.urlopen(url))
-    except Exception, e:
-        raise UserError( _('Cannot contact geolocation servers. Please make sure that your internet connection is up and running (%s).') % e)
+        result = requests.get(url, params={'sensor': 'false', 'address': addr}).json()
+    except Exception as e:
+        raise UserError(_('Cannot contact geolocation servers. Please make sure that your Internet connection is up and running (%s).') % e)
+
     if result['status'] != 'OK':
         return None
     try:
@@ -57,10 +59,8 @@ class SaleShop(models.Model):
     store_lat = fields.Char(string="Store Latitude")
     store_long = fields.Char(string="Store Longitude")
     store_active = fields.Boolean(string="Visible on Website")
-    sale_shop_category_id = fields.Many2one('sale.shop.category',
-                                            string='Shop Category')
 
-    @api.multi
+    # @api.multi
     def toggle_store_show_hide(self):
         self.store_active = not self.store_active
 
@@ -85,7 +85,7 @@ class SaleShop(models.Model):
                        'store_long': result.get('store_long')})
         return res
 
-    @api.multi
+    # @api.multi
     def write(self, vals):
         param = ('street', 'zipcode', 'city', 'store_state', 'country')
         for rec in self:

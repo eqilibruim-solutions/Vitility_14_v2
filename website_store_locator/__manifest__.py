@@ -15,21 +15,14 @@
 #################################################################################
 {
   "name"                 :  "Website Store Locator",
-  "summary"              :  """The module allows you to enter the physical address of your store on website so the customers can see it on the Google Map.""",
+  "summary"              :  """Store Locator display location of your store in the google map.""",
   "category"             :  "Website",
-  "version"              :  "1.2",
+  "version"              :  "1.1.0",
   "sequence"             :  1,
   "author"               :  "Webkul Software Pvt. Ltd.",
   "license"              :  "Other proprietary",
   "website"              :  "https://store.webkul.com/Odoo-Website-Store-Locator.html",
-  "description"          :  """Odoo Website Store Locator
-Store location detect
-Detect Store location
-Store address
-Website store address
-Store location on google map
-Store coordinates
-Store location on map""",
+  "description"          :  """""",
   "live_test_url"        :  "http://odoodemo.webkul.com/?module=website_store_locator&custom_url=/store/locator",
   "depends"              :  [
                              'sale_shop',
@@ -44,6 +37,7 @@ Store location on map""",
                              'views/webkul_addons_config_inherit_view.xml',
                              'data/store_set_default_values.xml',
                             ],
+  "demo"                 :  ['data/demo_data.xml'],
   "images"               :  ['static/description/Banner.png'],
   "application"          :  True,
   "installable"          :  True,

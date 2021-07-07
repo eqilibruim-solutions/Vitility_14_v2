@@ -17,22 +17,23 @@
     width: 100%;
 }
 
-.stores-location .panel-body {
-    padding: 0px;
-}
-
 .reset-loc {
     margin-left: 10px;
 }
 
 .stores-location #googleMap,
 .stores-location #store-menus {
-    height: 540px;
-    padding: 0px;
+    height: 550px;
+}
+
+@media (min-width: 1200px) {
+    #map-container {
+        padding-left: 0px;
+    }
 }
 
 .stores-location #store-menus {
-    padding: 0px;
+    padding-right: 0px;
     margin: 0px;
 }
 
@@ -82,6 +83,7 @@ li.shop-hidden {
     color: #333333;
     margin-top: 6px;
     margin-bottom: -6px;
+    width: 100%;
 }
 
 div.store-list {

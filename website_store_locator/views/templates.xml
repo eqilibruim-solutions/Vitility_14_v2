@@ -8,11 +8,11 @@
         </xpath>
     </template>
 
-    <template id="store_locator_footer" inherit_id="website.footer_default" name="Shop Locator Footer">
-        <xpath expr='//a[@href="/page/website.contactus"]' position="after">
+    <!-- <template id="store_locator_footer" inherit_id="website.footer_default" name="Shop Locator Footer">
+        <xpath expr='//a[@href="/contactus"]' position="after">
             <li><a class="" href="/store/locator">Locate a Store</a></li>
         </xpath>
-    </template>
+    </template> -->
 
     <template id="store_locator_page" customize_show="True" name="Shop Locations">
         <t t-call="website.layout">
@@ -25,45 +25,32 @@
     </template>
 
     <template id="store_locator_view">
-        <section class=" container-fluid stores-location mt8">
-            <div class="row">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="col-md-2 search-text"><img src="/website_store_locator/static/src/img/search-location.png" alt="store search" />Store Search: </div>
-                            <div class="col-md-4">
+        <section class="stores-location mt16 mb16">
+            <div class="container-fluid">
+                <div class="card panel-default">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-2 col-xs-2 search-text"><img src="/website_store_locator/static/src/img/search-location.png" alt="store search" /><span class="d-none d-xl-inline-block">Search:</span> </div>
+                            <div class="col-md-4 col-xs-8" style="padding: 0px;">
                                 <div class="input-group">
                                     <input type="text" name="search-input" id="search-input" class="form-control" placeholder="Search your store here..." />
-                                    <span class="input-group-btn">
-                                      <button class="btn btn-primary search-store" type="button"><i class="fa fa-search"/> Search</button>
+                                    <span class="input-group-append">
+                                        <button class="btn btn-primary search-store" type="button"><i class="fa fa-search"/> <span class="d-none d-xl-inline-block">Search</span></button>
                                     </span>
-                                    <select id="search-store-by-categ" class="form-control">
-                                        <option value="all">All</option>
-                                        <t t-foreach="categs" t-as="categ">
-                                            <option t-att-value="categ.id"><span t-field="categ.name"/></option>
-                                        </t>
-                                    </select>
                                 </div>
                             </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-primary reset-loc"><i class="fa fa-refresh" /> Reset Map</button>
-                            </div>
-                            <div class="col-md-2">
-                                <select id="search-store-by-country" class="form-control">
-                                    <option value="all">Select</option>
-                                    <t t-foreach="countries" t-as="country">
-                                        <option t-att-value="country.id"><span t-field="country.name"/></option>
-                                    </t>
-                                </select>
-                            </div>
+                            <button class="btn btn-primary reset-loc col-xs-2"><i class="fa fa-refresh" /> <span class="d-none d-xl-inline-block">Reset Map</span></button>
                             <div class="clearfix" />
                         </div>
-                        <div class="alert alert-info text-center fade in extra-information" style="display:none;"></div>
-                        <div class="panel-body">
-                            <div class="panel-group col-md-3 hidden-xs" id="store-menus">
-                                <t t-call="website_store_locator.locator_side_menu_panel_view" />
-                            </div>
-                            <div class="col-md-9" id="googleMap"></div>
+                    </div>
+                    <div class="alert alert-info text-center fade in extra-information" style="display:none;"></div>
+
+                    <div class="row">
+                        <div class="col-md-3 d-none d-xl-inline-block" id="store-menus">
+                            <t t-call="website_store_locator.locator_side_menu_panel_view" />
+                        </div>
+                        <div class="col-xl-9 col-xs-12" id="map-container">
+                            <div id="googleMap"/>
                         </div>
                     </div>
                 </div>
@@ -77,17 +64,14 @@
     </template>
 
     <template id="locator_side_menu_panel_view">
-        <div class="panel panel-default">
-            <div class="panel-heading store-list-panel"><span class="list-class"><i class="fa fa-list"/> Store List</span>
+        <div class="card">
+            <div class="card-header store-list-panel"><span class="list-class"><i class="fa fa-list"/> Store List</span>
                 <span class='label label-primary pull-right store-lable'>0 Store(s)</span>
             </div>
         </div>
-        <div class="panel-body">
-            <div class="store-menu">
-                <ul class="nav nav-pills nav-stacked"></ul>
-            </div>
+        <div class="store-menu">
+            <ul class="nav nav-pills nav-stacked"></ul>
         </div>
     </template>
 
 </odoo>
-

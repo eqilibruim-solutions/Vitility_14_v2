@@ -74,7 +74,7 @@
     <record id="action_store_locator_settings" model="ir.actions.act_window">
         <field name="name">Website Map Settings</field>
         <field name="res_model">website.store.locator.settings</field>
-        <field name="view_type">form</field>
+        <!-- <field name="view_type">form</field> -->
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_store_locator_settings" />

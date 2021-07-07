@@ -12,7 +12,7 @@ class WebkulWebsiteAddons(models.TransientModel):
     _inherit = 'webkul.website.addons'
 
     ##inherit the module for adding config option in webkul_website_addons
-    @api.multi
+    # @api.multi
     def get_store_locator_configuration_view(self):
         locator_config_ids = self.env['website.store.locator.settings'].search([])
         imd = self.env['ir.model.data']
@@ -33,4 +33,3 @@ class WebkulWebsiteAddons(models.TransientModel):
             result['views'] = [(form_view_id, 'form')]
             result['res_id'] = locator_config_ids[0].id
         return result
-   

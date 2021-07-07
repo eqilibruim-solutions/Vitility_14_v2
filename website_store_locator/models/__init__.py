@@ -5,6 +5,6 @@
 #
 #################################################################################
 
-import webkul_addons_config_inherit
-import res_config
-import sale_shop_inherit
+from . import webkul_addons_config_inherit
+from . import res_config
+from . import sale_shop_inherit

@@ -49,12 +49,7 @@ class StoreLocator(http.Controller):
 
     @http.route(["/store/locator"], type='http', auth="public", website=True)
     def store_locator_page(self, **kw):
-        countries = request.env['sale.shop'].sudo().search_read([('country', '!=', False)], ['country'])
-        cont_list = [c['country'][0] for c in countries]
-        vals = {
-            'categs': request.env['sale.shop.category'].sudo().search([]),
-            'countries': request.env['res.country'].sudo().browse(cont_list)
-        }
+        vals = {}
         return request.render("website_store_locator.store_locator_page", vals)
 
     def get_locator_config_settings_values(self):
@@ -97,20 +92,12 @@ class StoreLocator(http.Controller):
         return vals
 
     def get_store_data_dict(self, store=None, key=None):
-        data = {
-            key: {
-                'store_lat': store.store_lat,
-                'store_lng': store.store_long,
-                'store_name': store.name,
-                'store_image': False if not store.store_image else request.website.image_url(store, 'store_image'),
-                'store_address': [store.street, store.city, store.store_state.name, store.country.name, store.zipcode, store.store_web, store.store_phone, store.store_mob, store.store_fax, store.store_email],
-                'store_id': store.id,
-                'color': store.sale_shop_category_id.color,
-                'category': store.sale_shop_category_id.name,
-                'category_id': store.sale_shop_category_id.id,
-                'country': store.country.name,
-                'country_id': store.country.id,
-            }
-        }
+        data = {key: {'store_lat': store.store_lat,
+                      'store_lng': store.store_long,
+                      'store_name': store.name,
+                      'store_image': False if not store.store_image else request.website.image_url(store, 'store_image'),
+                      'store_address': [store.street, store.city, store.store_state.name, store.country.name, store.zipcode, store.store_web, store.store_phone, store.store_mob, store.store_fax, store.store_email],
+                      'store_id': store.id
+                      }
+                }
         return data
-

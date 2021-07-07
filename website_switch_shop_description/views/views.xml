@@ -16,8 +16,8 @@
     <record model="ir.actions.act_window" id="product_group_usage_action">
         <field name="name">Product soort</field>
         <field name="res_model">product.group.usage</field>
+        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
-        <field name="target">new</field>
     </record>
 
     <!-- Menu in website admin configurations -->

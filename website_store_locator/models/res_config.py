@@ -25,7 +25,7 @@ def map_geo_find(addr):
     url += urllib.quote(addr.encode('utf8'))
     try:
         result = json.load(urllib.urlopen(url))
-    except Exception, e:
+    except Exception as e:
         raise UserError(
             _('Cannot contact geolocation servers. Please make sure that your internet connection is up and running (%s).') % e)
     if result['status'] != 'OK':
@@ -51,6 +51,7 @@ def map_geo_query_address(street=None, zip=None, city=None, state=None, country=
 
 class WebsiteStoreLocatorSettings(models.Model):
     _name = 'website.store.locator.settings'
+    _description = 'Website Store Locator Settings'
 
     # google map information
     is_active = fields.Boolean(string="Active on website")
@@ -88,7 +89,7 @@ class WebsiteStoreLocatorSettings(models.Model):
             'name': _("Message"),
             'view_mode': 'form',
             'view_id': False,
-            'view_type': 'form',
+            # 'view_type': 'form',
             'res_model': 'website.message.wizard',
             'res_id': int(wizard_id.id),
             'type': 'ir.actions.act_window',
@@ -96,7 +97,7 @@ class WebsiteStoreLocatorSettings(models.Model):
             'target': 'new'
         }
 
-    @api.multi
+    # @api.multi
     def toggle_is_active(self):
         """ Inverse the value of the field ``active`` on the records in ``self``. """
 
