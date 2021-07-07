@@ -6,19 +6,11 @@
 <odoo>
   <data>
     <template id="website_layout" inherit_id="website.layout" name="Tag Manager Snippet" priority="200">
-      <xpath expr="//div[@id='wrapwrap']" position="before">
-        <t t-if="website and website.google_tagmanager_key and not editable">
-          &lt;!-- Google Tag Manager (noscript) --&gt;
-            <noscript><iframe t-attf-src="https://www.googletagmanager.com/ns.html?id=#{ website.google_tagmanager_key }"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-          &lt;!-- End Google Tag Manager (noscript) --&gt;
-        </t>
-      </xpath>
       <xpath expr="//meta[@name='generator']" position="before">
+        <script>
+          dataLayer = [{}];
+        </script>
         <t t-if="website and website.google_tagmanager_key and not editable">
-          <script>
-            dataLayer = [{}];
-          </script>
           &lt;!-- Google Tag Manager --&gt;
           <script id='tagmanager_code'>
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -28,6 +20,17 @@
             })(window,document,'script','dataLayer','<t t-esc="website.google_tagmanager_key"/>');
           </script>
           &lt;!-- End Google Tag Manager --&gt;
+        </t>
+      </xpath>
+    </template>
+
+    <template id="portal_frontend_layout" inherit_id="portal.frontend_layout" name="Tag Manager Snippet" priority="200">
+      <xpath expr="//div[@id='wrapwrap']" position="before">
+        <t t-if="website and website.google_tagmanager_key and not editable">
+          &lt;!-- Google Tag Manager (noscript) --&gt;
+            <noscript><iframe t-attf-src="https://www.googletagmanager.com/ns.html?id=#{ website.google_tagmanager_key }"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          &lt;!-- End Google Tag Manager (noscript) --&gt;
         </t>
       </xpath>
     </template>
@@ -42,10 +45,11 @@
                 'impressions': [
                   <t t-set="position" t-value="1"/>
                   <t t-foreach="products" t-as="product">
+                    <t t-set="combination_info" t-value="product._get_combination_info(only_template=True, add_qty=add_qty or 1, pricelist=pricelist)"/>
                     {
                       'name': '<t t-esc="product.name"/>',
                       'id': '<t t-if="product.default_code" t-esc="product.default_code"/> <t t-else="" t-esc="product.name" />',
-                      'price': '<t t-esc="product.website_price"/>',
+                      'price': '<t t-esc="combination_info['price']"/>',
                       <t t-if="category">'category': '<t t-esc="category.name"/>',</t>
                       'list': 'Shop Page',
                       'position': <t t-esc="position" />
@@ -70,7 +74,7 @@
                     'products': [{
                       'name': '<t t-esc="product.name"/>',
                       'id': '<t t-if="product.default_code" t-esc="product.default_code"/> <t t-else="" t-esc="product.name" />',
-                      'price': '<t t-esc="product.website_price"/>',
+                      'price': '<t t-esc="combination_info['price']"/>',
                       <t t-if="category">'category': '<t t-esc="category.name"/>',</t>
                     }]
                   }
@@ -81,21 +85,19 @@
         </xpath>
         <xpath expr="//a[@id='add_to_cart']" position="attributes">
           <t t-if="website and website.google_tagmanager_key and not editable">
-            <attribute name="t-attf-onclick">
-              dataLayer.push({
+            <attribute name="t-attf-onclick" separator=" " add="dataLayer.push({
                 'event': 'addToCart',
                 'currencyCode': '#{website.currency_id.name}',
                 'add': {
                   'products': [{
                     'name': '#{product.name}',
                     'id': '#{product.default_code if product.default_code else product.name}',
-                    'price': '#{product.website_price}',
+                    'price': '#{combination_info['price']}',
                     'category': '#{category.name if category else ''}',
                     'quantity': 1
                   }]
                 }
-              })
-            </attribute>
+              });" />
           </t>
         </xpath>
     </template>
@@ -103,8 +105,7 @@
     <template id="products_item" inherit_id="website_sale.products_item" name="Products item Tag Manager" priority="200">
       <xpath expr="//div[hasclass('oe_product_image')]/a" position="attributes">
         <t t-if="website and website.google_tagmanager_key and not editable">
-          <attribute name="t-attf-onclick">
-            dataLayer.push({
+          <attribute name="t-attf-onclick" separator=" " add="dataLayer.push({
               'event': 'productClick',
               'ecommerce': {
                 'click': {
@@ -112,19 +113,17 @@
                   'products': [{
                     'name': '#{product.name}',
                     'id': '#{product.default_code if product.default_code else product.name}',
-                    'price': '#{product.website_price}',
+                    'price': '#{combination_info['price']}',
                     'category': '#{category.name if category else ''}'
                   }]
                 }
               }
-            })
-          </attribute>
+            })" />
         </t>
       </xpath>
-      <xpath expr="//section//a[@itemprop='name']" position="attributes">
+      <xpath expr="//form//a[@itemprop='name']" position="attributes">
         <t t-if="website and website.google_tagmanager_key and not editable">
-          <attribute name="t-attf-onclick">
-            dataLayer.push({
+          <attribute name="t-attf-onclick" separator=" " add="dataLayer.push({
               'event': 'productClick',
               'ecommerce': {
                 'click': {
@@ -132,13 +131,12 @@
                   'products': [{
                     'name': '#{product.name}',
                     'id': '#{product.default_code if product.default_code else product.name}',
-                    'price': '#{product.website_price}',
+                    'price': '#{combination_info['price']}',
                     'category': '#{category.name if category else ''}'
                   }]
                 }
               }
-            })
-          </attribute>
+            })" />
         </t>
       </xpath>
     </template>
@@ -146,7 +144,6 @@
     <template id="cart" inherit_id="website_sale.cart" name="Cart Tag Manager" priority="200">
         <xpath expr="//div[@id='wrap']" position="after">
           <t t-if="website and website.google_tagmanager_key and not editable">
-            <t t-set="wk_sale_order" t-value="website.sale_get_order()" />
             <script>
               dataLayer.push({
                 'event': 'checkout',
@@ -154,7 +151,7 @@
                   'checkout': {
                     'actionField': {'step': 1, 'option': 'Review Cart'},
                     'products': [
-                      <t t-foreach="wk_sale_order.website_order_line" t-as="line">
+                      <t t-foreach="website_sale_order.website_order_line" t-as="line">
                         {
                           'name': '<t t-esc="line.product_id.name"/>',
                           'id': '<t t-if="line.product_id.default_code" t-esc="line.product_id.default_code"/> <t t-else="" t-esc="line.product_id.name" />',
@@ -171,34 +168,15 @@
         </xpath>
     </template>
 
-    <template id="checkout" inherit_id="website_sale.checkout" name="Checkout Tag Manager" priority="200">
+    <!-- <template id="checkout" inherit_id="website_sale.checkout" name="Checkout Tag Manager" priority="200">
         <xpath expr="//div[@id='wrap']" position="after">
           <t t-if="website and website.google_tagmanager_key and not editable">
-            <t t-set="wk_sale_order" t-value="website.sale_get_order()" />
             <script>
               dataLayer.push({
                 'event': 'checkoutOption',
                 'ecommerce': {
                   'checkout_option': {
-                    'actionField': {'step': 2, 'option': 'Confirm Addresses'}
-                  }
-                }
-              });
-            </script>
-          </t>
-        </xpath>
-    </template>
-
-    <!-- <template id="address" inherit_id="website_sale.address" name="Address Tag Manager" priority="200">
-        <xpath expr="//div[@id='wrap']" position="after">
-          <t t-if="website and website.google_tagmanager_key and not editable">
-            <t t-set="wk_sale_order" t-value="website.sale_get_order()" />
-            <script>
-              dataLayer.push({
-                'event': 'checkoutOption',
-                'ecommerce': {
-                  'checkout_option': {
-                    'actionField': {'step': '2', 'option': 'checkoutOption'}
+                    'actionField': {'step': 2, 'option': 'Confirm Addresses'},
                   }
                 }
               });
@@ -215,7 +193,7 @@
                 'event': 'checkoutOption',
                 'ecommerce': {
                   'checkout_option': {
-                    'actionField': {'step': 3, 'option': 'Collect Payment Info'}
+                    'actionField': {'step': '2', 'option': 'Collect Payment Info'}
                   }
                 }
               });
@@ -232,7 +210,7 @@
                 'event': 'checkoutOption',
                 'ecommerce': {
                   'checkout_option': {
-                    'actionField': {'step': '4', 'option': 'Confirm Purchase Details'}
+                    'actionField': {'step': '3', 'option': 'Confirm Purchase Details'}
                   }
                 },
               });

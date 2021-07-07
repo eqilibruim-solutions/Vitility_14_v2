@@ -12,4 +12,4 @@ from odoo import fields, models
 class Website(models.Model):
     _inherit = 'website'
 
-    google_tagmanager_key = fields.Char('Google container ID', help="Google Tag Manager container id.")
+    google_tagmanager_key = fields.Char('Google container ID')
