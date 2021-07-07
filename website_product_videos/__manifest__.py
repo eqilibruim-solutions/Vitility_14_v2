@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #################################################################################
 # Author      : Webkul Software Pvt. Ltd. (<https://webkul.com/>)
 # Copyright(c): 2015-Present Webkul Software Pvt. Ltd.
@@ -12,44 +13,48 @@
 # You should have received a copy of the License along with this program.
 # If not, see <https://store.webkul.com/license.html/>
 #################################################################################
-
 {
-    'name'          : "Website Product Videos With Multi Images",
-    'version'       : '1.1',
-    'summary'       : """Website product videos with multi-images""",
-    'author'        : 'Webkul Software Pvt. Ltd.',
-    'website'       : 'https://store.webkul.com/Odoo-Website-Product-Videos-With-Multi-Images.html',
-    "license"       :  "Other proprietary",
-    'category'      : 'website',
-    "live_test_url" : "http://odoodemo.webkul.com/?module=website_product_videos&custom_url=/shop/product/e-com10-apple-wireless-keyboard-18",
-    'description'   : """
-
-This module works very well with latest version of Odoo 10.0
---------------------------------------------------------------
-    """,
-    'depends'       : [
-        'website_sale',
-        'website_webkul_addons'
-    ],
-
-    'data'          : [
-                        'views/templates.xml',
-                        'security/product_video.xml',
-                        'security/ir.model.access.csv',
-                        'views/res_config_view.xml',
-                        'views/product_views.xml',
-                        'views/webkul_addons_config_inherit_view.xml',
-    ],
-    'demo': [
-        'data/demo.xml',
-    ],
-    "images"        :  ['static/description/Banner.png'],
-    "application"   :  True,
-    "installable"   :  True,
-    "auto_install"  :  False,
-    "price"         :  45,
-    "currency"      :  "EUR",
-    'sequence'      :   1,
-    'pre_init_hook' :   'pre_init_check',
-    'post_init_hook' : '_auto_configuration',
+  "name"                 :  "Odoo Website Product Multi-Videos",
+  "summary"              :  """Odoo Website Product Videos With Multi Images allows you to add product videos on the website to provide a deeper insight into the products.""",
+  "category"             :  "Website",
+  "version"              :  "1.0.1",
+  "sequence"             :  1,
+  "author"               :  "Webkul Software Pvt. Ltd.",
+  "license"              :  "Other proprietary",
+  "website"              :  "https://store.webkul.com/Odoo-Website-Product-Videos-With-Multi-Images.html",
+  "description"          :  """Odoo Website Product Videos With Multi Images
+Website Product Videos With Multi Images
+Product Videos
+Product Videos With Multi Images
+Odoo Website
+Videos With Multi Images
+Videos in Odoo Website
+Odoo Website Product Videos
+Product Videos With Multi Images in Odoo Website
+Website Product Videos
+Odoo
+Website
+Videos in Website
+Show Videos in Odoo Website""",
+  "live_test_url"        :  "http://odoodemo.webkul.com/?module=website_product_videos&custom_url=/demo/videos",
+  "depends"              :  [
+                             'website_sale',
+                             'website_webkul_addons',
+                            ],
+  "data"                 :  [
+                             'views/templates.xml',
+                             'security/ir.model.access.csv',
+                             'views/res_config_view.xml',
+                             'views/product_views.xml',
+                             'views/webkul_addons_config_inherit_view.xml',
+                             'data/data_video.xml',
+                            ],
+  "demo"                 :  ['data/demo.xml'],
+  "images"               :  ['static/description/Banner.png'],
+  "application"          :  True,
+  "installable"          :  True,
+  "auto_install"         :  False,
+  "price"                :  45,
+  "currency"             :  "USD",
+  "pre_init_hook"        :  "pre_init_check",
 }

@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//table/tbody" position="after">
                      <tr>
-                        <td>2</td>
+                        <td>7</td>
                         <td><label for="module_website_product_video"/></td>
                         <td><field name="module_website_product_video"/></td>
                         <td>

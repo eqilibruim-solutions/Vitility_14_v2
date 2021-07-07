@@ -13,6 +13,6 @@
 # If not, see <https://store.webkul.com/license.html/>
 #################################################################################
 
-import product
-import webkul_addons_config
-import res_config
+from . import product
+from . import webkul_addons_config
+from . import res_config

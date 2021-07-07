@@ -2,36 +2,79 @@
 /* See LICENSE file for full copyright and licensing details. */
 odoo.define('website_product_videos.wk_product_video', function (require) {
     "use strict";
-    var ajax = require('web.ajax');
+
+    var rpc = require('web.rpc');
+    var sAnimation = require('website.content.snippets.animation');
+
+    sAnimation.registry.renderPopUpIframe = sAnimation.Class.extend({
+        selector: "#wrap",
+        read_events: {
+            'click .wk_provideo': '_render_iframe'
+        },
+        _render_iframe: function(evt) {
+            let $currentTarget = $(evt.currentTarget).find('.js_video_img');
+            let pvid = $currentTarget.attr('data-pvid');
+            console.log(pvid);
+            
+            $('#popupvideo').remove();
+            rpc.query({
+                route: '/shop/product/iframe',
+                params: {
+                    'pvid': pvid
+                },
+            }).then(function(data){
+                $('#wrap').append(data);
+                $('#popupvideo').modal('show');
+            });
+        }
+    });
+
     $(document).ready(function() {
-        $("div.wk_provideo").parents('div').css("text-align", "center");
-        var url = $(".descriptionVideo").attr('src');
+
+        var url = $(".wkmultivideo").attr('src');
         $('.wk_provideo').on('click', '.wk_image', function(e) {
             url = $(this).parent().find('.wk_video_url').val();
         });
-        $("#popupvideo").on('hide.bs.modal', function(){
-            $(".descriptionVideo").attr('src', '');
+        $(document).on('hidden.bs.modal','#popupvideo', function () {
+            $(".wkmultivideo").attr('src', '');
+          })
+        $(document).on('show.bs.modal','#popupvideo', function () {
+            $(".wkmultivideo").attr('src', url);
         });
-        $("#popupvideo").on('show.bs.modal', function(){
-            $(".descriptionVideo").attr('src', url);
-        });
-        var videourl = $('.wkmultivideo').attr('src');
-        var wkhover = $('input.wk_hover').val();
+
+        var wkhover = Boolean($('input.wk_hover').val());
         if (wkhover) {
-            $(".wk_descvideo" ).hover(
-                function() {
+            let videourl = '';
+        
+	    if ($(document).width() > 500 ){
+                $(".wk_descvideo").hover(function() {
                     videourl = $(this).find('.wkmultivideo').attr('src');
                     $(this).find('.wkmultivideo').attr('src', videourl + '&autoplay=1');
                 }, function() {
-                $(this).find('.wkmultivideo').attr('src', videourl);
+                    $(this).find('.wkmultivideo').attr('src', videourl);
                 });
-            $(".item" ).hover(
-                function() {
-                    videourl = $(this).find('.wkmultivideo').attr('src');
-                    $(this).find('.wkmultivideo').attr('src', videourl + '&autoplay=1');
-                }, function() {
+		        $(".carousel-item").hover(function() {
+                	videourl = $(this).find('.wkmultivideo').attr('src');
+                	$(this).find('.wkmultivideo').attr('src', videourl + '&autoplay=1');
+            	}, function() {
+                	$(this).find('.wkmultivideo').attr('src', videourl);
+            	});
+            }
+            $(document).on('click', ".carousel-item", function() {
+                videourl = $(this).find('.wkmultivideo').attr('src');
+                $(this).find('.wkmultivideo').attr('src', videourl + '&autoplay=1');
+            })
+            $(document).on('mouseleave', ".carousel-item", function() {
+                videourl = $(this).find('.wkmultivideo').attr('src');
                 $(this).find('.wkmultivideo').attr('src', videourl);
-                });
+            });
+            $(document).on('click', "#popupvideo .wkmultivideo", function() {
+                videourl = $(this).attr('src');
+                $(this).attr('src', videourl + '&autoplay=1');
+            })
+            $(document).on('mouseleave', "#popupvideo .wkmultivideo", function() {
+                $(this).attr('src', videourl);
+            });
         }
-        });
+    });
 })

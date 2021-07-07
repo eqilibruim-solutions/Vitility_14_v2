@@ -27,5 +27,16 @@
             <field name="video_id">134644518</field>
             <field name="image" type="base64" file="website_product_videos/static/img/vimeo.png"/>
         </record>
+        <record id="video_product" model="product.template">
+            <field name="name">Test Video Product</field>
+            <field name="standard_price">500.0</field>
+            <field name="list_price">750.0</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="website_published" eval="True"/>
+            <field name="product_video_ids" eval="[(6,0, [ref('website_product_videos.product_video_1'), ref('website_product_videos.product_video_2'), ref('website_product_videos.product_video_3')])]"/>
+            <field name="image_1024" type="base64" file="website_product_videos/static/img/webkul.jpg"/>
+        </record>
     </data>
 </odoo>
