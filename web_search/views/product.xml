@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_product_keyword_form_view" model="ir.ui.view">
+        <field name="name">product.keyword.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <field name="availability" position="after">
+                <field name="bam_product_keyword1"/>
+                <field name="bam_product_keyword2"/>
+                <field name="bam_product_keyword3"/>
+                <field name="bam_product_keyword4"/>
+                <field name="bam_product_keyword5"/>
+            </field>
+        </field>
+    </record>
+</odoo>
