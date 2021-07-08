@@ -2,7 +2,7 @@
 {
     # Module info
     'name': 'Website Switch Shop Description add fields',
-    'version': '1.3.3',
+    'version': '14.3.3',
     'category': 'website',
     'sequence': 1,
     'summary': 'Switch the description of the shop for product and add fields for product.',
