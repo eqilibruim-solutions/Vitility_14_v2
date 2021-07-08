@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Custom CSS-JS">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/website_product_filter_mobile_spt/static/src/css/custom.css"/>
+                <script src="/website_product_filter_mobile_spt/static/src/js/custom.js" type="text/javascript"></script>
+            </xpath>
+        </template>
+        <template id="website_product_filter_mobile_spt.display_filter_button" name="Display Product filter">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+                <ul class="nav nav-pills nav-stacked mt16" id="o_shop_collapse_category" style="padding-left: 15px;">
+                    <li t-att-class=" '' if category else 'active' ">
+                        <a t-att-href="keep('/shop',category=0)" class="o_not_editable">All Products</a>
+                    </li>
+                    <t t-foreach="categories" t-as="categ">
+                        <t t-call="website_sale.option_collapse_categories_recursive" /></t>
+                </ul>
+                <form class="js_attributes" method="get"  style="padding-left: 15px; padding-right:5px">
+                    <input type="hidden" name="search" t-att-value="search" />
+                    <ul class="nav nav-pills nav-stacked mt16">
+                        <t t-foreach="attributes" t-as="a">
+                            <li t-if="a.value_ids and len(a.value_ids) &gt; 1">
+                                <div>
+                                    <strong t-field="a.name" />
+                                </div>
+                                <t t-if="a.type == 'select'">
+                                    <select class="form-control" name="attrib">
+                                        <option value="" />
+                                        <t t-foreach="a.value_ids" t-as="v">
+                                            <option t-att-value="'%s-%s' % (a.id,v.id)" t-esc="v.name" t-att-selected="v.id in attrib_set" />
+                                        </t>
+                                    </select>
+                                </t>
+                                <t t-if="a.type == 'radio'">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <t t-foreach="a.value_ids" t-as="v">
+                                            <li t-att-class="'active' if v.id in attrib_set else None">
+                                                <label style="margin: 0 20px;">
+                                                    <input type="checkbox" name="attrib" t-att-value="'%s-%s' % (a.id,v.id)" t-att-checked="'checked' if v.id in attrib_set else None" />
+                                                    <span style="font-weight: normal" t-field="v.name" />
+                                                </label>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </t>
+                                <t t-if="a.type == 'color'">
+                                    <t t-foreach="a.value_ids" t-as="v">
+                                        <label t-attf-style="background-color:#{v.html_color or v.name}" t-attf-class="css_attribute_color #{'active' if v.id in attrib_set else ''}">
+                                            <input type="checkbox" name="attrib" t-att-value="'%s-%s' % (a.id,v.id)" t-att-checked="'checked' if v.id in attrib_set else None" t-att-title="v.name" />
+                                        </label>
+                                    </t>
+                                </t>
+                            </li>
+                        </t>
+                    </ul>
+                </form>
+            </div>
+            <div class="icon-filter-bar">
+                <i class="fa fa-filter" aria-hidden="true" style="font-size:15px;cursor:pointer;font-weight: bold;" onclick="openNav()"></i>
+            </div>
+            <script>
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "250px";
+				}
+
+				function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+				}
+                $('#mySidenav #o_shop_collapse_category').on('click', '.fa-chevron-right',function(){
+                    $(this).parent().siblings().find('.fa-chevron-down:first').click();
+                    $(this).parents('li').find('ul:first').show('normal');
+                    $(this).toggleClass('fa-chevron-down fa-chevron-right');
+                });
+
+                $('#mySidenav #o_shop_collapse_category').on('click', '.fa-chevron-down',function(){
+                    $(this).parent().find('ul:first').hide('normal');
+                    $(this).toggleClass('fa-chevron-down fa-chevron-right');
+                });
+
+				</script>
+        </template>
+        <template id="product_qty_in_products_item_page" inherit_id="website_sale.products" active="True" customize_show="True" name="Show Filter button">
+            <xpath expr="//div[@class='container oe_website_sale']" position="inside">
+                <t t-call="website_product_filter_mobile_spt.display_filter_button"></t>
+            </xpath>
+        </template>
+    </data>
+</odoo>
