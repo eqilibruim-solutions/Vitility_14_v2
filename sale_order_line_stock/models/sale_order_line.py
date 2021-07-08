@@ -12,18 +12,20 @@ class SaleOrderLine(models.Model):
         compute='_compute_wh_qty_available',
         string='Quantity on hand warehouse')
 
-    @api.one
     @api.depends(
         'product_id', 'order_id.warehouse_id', 'product_id.immediately_usable_qty')
     def _compute_wh_qty_available(self):
-        if self.product_id.exists() and self.product_id.x_omdoos_aantal_producten:
-            product = self.env['product.product'].with_context(
-                warehouse=self.order_id.warehouse_id.id).browse(
-                self.product_id.id)
-            self.wh_qty_available = str(int(product.immediately_usable_qty)) + "(" + \
-                                str(product.x_omdoos_aantal_producten) + ")"
-        elif self.product_id.exists():
-            product = self.env['product.product'].with_context(
-                warehouse=self.order_id.warehouse_id.id).browse(
-                self.product_id.id)
-            self.wh_qty_available = str(int(product.immediately_usable_qty))
+        for rec in self.product_id:
+            if rec.exists() and rec.x_omdoos_aantal_producten:
+                product = self.env['product.product'].with_context(
+                    warehouse=self.order_id.warehouse_id.id).browse(
+                    rec.id)
+                for record in product:
+                    self.wh_qty_available = str(int(record.immediately_usable_qty)) + "(" + \
+                                    str(record.x_omdoos_aantal_producten) + ")"
+            elif rec.exists():
+                product = self.env['product.product'].with_context(
+                    warehouse=self.order_id.warehouse_id.id).browse(
+                    rec.id)
+                for record in product:
+                    self.wh_qty_available = str(int(record.immediately_usable_qty))
