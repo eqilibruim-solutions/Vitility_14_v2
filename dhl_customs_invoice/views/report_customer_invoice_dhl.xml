@@ -36,15 +36,14 @@
                         <t t-if="company.country_id.name">
                             <span t-field="company.country_id.name"/>
                         </t>
-                        |
-                        <strong>CC :</strong>
-                        <span>18050364</span>
-                        |
+                            <strong>CC :</strong>
+                            <span>18050364</span>
+                            |
                         <t t-if="company.vat"><strong>VAT :</strong>
                             <span t-field="company.vat"/>
                         </t>
-                        <strong>BIC :</strong>
-                        <span>ABNANL2A</span>
+                            <strong>BIC :</strong>
+                            <span>ABNANL2A</span>
                         <br/>
                         <t t-if="company.income_currency_exchange_account_id.name">
                             <strong>Bank :</strong>
@@ -56,7 +55,6 @@
                             <span t-field="company.phone"/>
                             |
                         </t>
-
                         <t t-if="company.email">
                             <strong>Email :</strong>
                             <span t-field="company.email"/>
@@ -67,8 +65,14 @@
                             <span t-field="company.website"/>
 							|
                         </t>
-                          <strong>EORI:</strong>
-                        <span>NL806491188</span>
+                        <t t-if="o.partner_id.country_id.id == 233">
+                            <br/>
+                            <strong>EORI:</strong>
+                            <span>GB078457372000</span>
+                            |
+                            <strong>CC :</strong>
+                            <span>385694146</span>
+                        </t>
                     </div>
                 </div>
             </div>
@@ -111,12 +115,22 @@
                                         <t t-if="o.partner_id.child_ids.filtered(lambda record: record.type == 'delivery')">
                                             <t t-set="partner_shipping" t-value="o.partner_id.child_ids.filtered(lambda record: record.type == 'delivery')[0]"/>
                                             <address t-esc="partner_shipping" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                                            <t t-if="o.partner_id.country_id.name == 233">
+                                                <span t-field="o.partner_id.phone"/>
+                                                <br/>
+                                                <span t-field="o.partner_id.email"/>
+                                            </t>
                                             <span t-if="o.partner_id.vat">TIN:
                                                 <span t-field="o.partner_id.vat"/>
                                             </span>
                                         </t>
                                         <t t-if="not o.partner_id.child_ids.filtered(lambda record: record.type == 'delivery')">
                                             <address t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                                            <t t-if="o.partner_id.country_id.name == 233">
+                                                <span t-field="o.partner_id.phone"/>
+                                                <br/>
+                                                <span t-field="o.partner_id.email"/>
+                                            </t>
                                             <span t-if="o.partner_id.vat">TIN:
                                                 <span t-field="o.partner_id.vat"/>
                                             </span>
