@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
-        <template id="Custom_footer1" inherit_id="website.footer_default" name="mini Footers">
+<odoo>
+    
+        <template id="Custom_footer1" inherit_id="website.footer_custom" name="mini Footers">
             <xpath expr="//div[@id='footer']" position="replace">
                 <div id="footer" style="display:none;" class="container hidden-print">
                     <div class="row">
@@ -43,9 +43,8 @@
                                 <a t-att-href="website.social_youtube" t-if="website.social_youtube">
                                     <i class="fa fa-youtube-play"/>
                                 </a>
-                                <a t-att-href="website.social_googleplus" t-if="website.social_googleplus"
-                                   rel="publisher">
-                                    <i class="fa fa-google-plus-square"/>
+                                <a t-if="website.social_instagram" t-att-href="website.social_instagram">
+                                    <i class="fa fa-instagram"/>
                                 </a>
                                 <a t-att-href="website.social_github" t-if="website.social_github">
                                     <i class="fa fa-github"/>
@@ -77,22 +76,25 @@
             </xpath>
         </template>
 
-        <template id="custom_footer2" inherit_id="website.footer_default" customize_show="True" name=" Footer 1">
+        <template id="custom_footer2" inherit_id="website.footer_custom"   name=" Footer 1">
              <xpath expr="//div[@id='footer']" position="after">
-              <footer class="site-footer">
+              <div class="site-footer">
                         <div class="footer-top">
                             <div class="container">
                               <div class="row">
                                 <div class="col-md-4">
                                     <a class="logo" href="/">
-                                        <span itemprop="image" t-field="res_company.logo"
-                                            t-field-options='{"widget": "image","class":"logo_img"}'/>
+                                       
+                                            <span t-field="website.logo" t-options="{'widget': 'image'}" t-att-alt="'Logo of %s' % website.name" t-att-title="website.name" />
                                     </a>
                                     <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, Etiam mollis libero.</div>
                                     <ul class="social-link ">
                                         <li class="facebook"><a target="_blank" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a></li>
                                         <li class="twitter"><a target="_blank" t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="googleplus"><a target="_blank" t-att-href="website.social_googleplus" t-if="website.social_googleplus"><i class="fa fa-google-plus"></i></a></li>
+                                      
+                                        <li class="instagram"><a t-if="website.social_instagram" t-att-href="website.social_instagram">
+                                    <i class="fa fa-instagram"/>
+                                </a></li>
                                         <li class="linkedin"><a target="_blank" t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"></i></a></li>
                                         <li class="youtube"><a target="_blank" t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"></i></a></li>
                                     </ul>
@@ -132,212 +134,21 @@
                         </div>
                          <div class="site-info">
                             <div class="container">
-                                <div class="row">
-                                 <div class="col-md-8 col-md-offset-2 text-center">© Copyright 2018 All Rights Reserved.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                                
+							<div class="row">
+								<div class="col">
+									<p class="copyright">Copyright @ 2020 All Rights Reserved.</p>
+								</div>
+								<div class="col text-md-right">
+									<img src="/theme_impacto/static/img/payment.png" title="Comercio" alt="Comercio" />
+								</div>
+								</div>
+                              </div>
+                          </div>
+                </div>
             </xpath>
         </template>
 
-        <template id="custom_footer3" inherit_id="website.footer_default"  name=" Footer 2" active="False" customize_show="True">
-            <xpath expr="//div[@id='footer']" position="after">
-                <footer class="site-footer footer3">
-                    <div class="footer-top">
-                        <div class="container">
-                            <div class="row" >
-                                <div class="col-md-3">
-                                    <a class="logo" href="/">
-                                        <span itemprop="image" t-field="res_company.logo"
-                                            t-field-options='{"widget": "image","class":"logo_img"}'/>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <ul class="footer-menu menu-inline">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Shop</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 text-right">
-                                    <ul class="social-link">
-                                       <li class="facebook"><a target="_blank" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="twitter"><a target="_blank" t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="googleplus"><a target="_blank" t-att-href="website.social_googleplus" t-if="website.social_googleplus"><i class="fa fa-google-plus"></i></a></li>
-                                        <li class="linkedin"><a target="_blank" t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li class="youtube"><a target="_blank" t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <h6 class="footer-title">About Us</h6>
-                                    <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, sed do eiusmod tempor.</div>
-                                </div>
-                                <div class="col-md-2 col-md-offset-1">
-                                    <h6 class="footer-title">Usefull Link</h6>
-                                    <ul class="footer-ul footer-menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-2">
-                                    <h6 class="footer-title"> </h6>
-                                    <ul class="footer-ul footer-menu">
-                                        <li><a href="#">Create Account</a></li>
-                                        <li><a href="#">Typography</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Terms &amp; Conditions</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-2">
-                                    <h6 class="footer-title"> </h6>
-                                    <ul class="footer-ul footer-menu">
-                                        <li><a href="#">Create Account</a></li>
-                                        <li><a href="#">Typography</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Terms &amp; Conditions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="site-info">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2 text-center">© Copyright 2018 All Rights Reserved.</div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </xpath>
-        </template>
-
-        <template id="custom_footer4" inherit_id="website.footer_default"  name=" Footer 3" active="False" customize_show="True">
-            <xpath expr="//div[@id='footer']" position="after">
-                <footer class="site-footer footer2">
-                        <div class="footer-top">
-                            <div class="container"><div class="row">
-                                <div class="col-md-3">
-                                    <a class="logo" href="/">
-                                        <span itemprop="image" t-field="res_company.logo"
-                                            t-field-options='{"widget": "image","class":"logo_img"}'/>
-                                    </a>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <ul class="footer-menu menu-inline">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Shop</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 text-right">
-                                    <ul class="social-link">
-                                        <li class="facebook"><a target="_blank" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="twitter"><a target="_blank" t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="googleplus"><a target="_blank" t-att-href="website.social_googleplus" t-if="website.social_googleplus"><i class="fa fa-google-plus"></i></a></li>
-                                        <li class="linkedin"><a target="_blank" t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li class="youtube"><a target="_blank" t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"></i></a></li>
-                                    </ul>
-                                </div>
-                             </div>
-                           </div>
-                        </div>
-                        <div class="site-info"><div class="container">
-                            <div class="row">
-                                <div class="col-sm-6">© 2017  All rights reserved</div>
-                                <div class="col-sm-6 text-right">
-                                    <div class="footer-menu menu-inline">
-                                        <ul class="link">
-                                            <li><a href="#">Term &amp; Condition</a></li>
-                                            <li><a href="#">Policy &amp; privacy</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-            </xpath>
-        </template>
-
-        <template id="custom_footer5" inherit_id="website.footer_default"  name=" Footer 4" active="False" customize_show="True">
-            <xpath expr="//div[@id='footer']" position="after" >
-                <footer class="site-footer footer4">
-                    <div class="footer-top">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <a class="logo" href="/">
-                                            <span itemprop="image" t-field="res_company.logo"
-                                                t-field-options='{"widget": "image","class":"logo_img"}'/>
-                                        </a>
-                                </div>
-                            </div>
-                            <div class="row text-center">
-                               <div class="col-lg-4 col-md-4">
-                                  <div class="contact-add mb-30"> 
-                                   <div class="text-center">
-                                       <i class="fa fa-map-marker"></i>
-                                        <h6 class="footer-title">Address</h6>
-                                       <span t-field="res_company.street"/> <span t-field="res_company.city"/> 
-                                      </div>
-                                  </div>
-                               </div>
-                               <div class="col-lg-4 col-md-4">
-                                  <div class="contact-add mb-30"> 
-                                   <div class="text-center">
-                                      <i class="fa fa-phone"></i>
-                                      <h6 class="footer-title">Call Us</h6>
-                                     <span t-field="res_company.phone"></span>
-                                    </div>
-                                  </div>
-                               </div>
-                               <div class="col-lg-4 col-md-4">
-                                  <div class="contact-add mb-30"> 
-                                    <div class="text-center">
-                                      <i class="fa fa-envelope-o"></i>
-                                      <h6 class="footer-title">Email Us</h6>
-                                      <span t-field="res_company.email"></span>
-                                   </div>
-                                  </div>
-                               </div>
-                               </div>
-                        </div>
-                    </div>
-                    <div class="site-info">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">© Copyright 2018 All Rights Reserved.</div>
-                                <div class="col-md-6 text-right">
-                                    <ul class="social-link">
-                                         <li class="facebook"><a target="_blank" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="twitter"><a target="_blank" t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="googleplus"><a target="_blank" t-att-href="website.social_googleplus" t-if="website.social_googleplus"><i class="fa fa-google-plus"></i></a></li>
-                                        <li class="linkedin"><a target="_blank" t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li class="youtube"><a target="_blank" t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </footer>
-            </xpath>
-        </template>
-
-       <template id="custom_layout_footer_copyright" inherit_id="website.layout_footer_copyright" >
-           <xpath expr="//div[@class='container mt16 mb8']" position="replace">
-           </xpath>
-       </template>
-    </data>
-</openerp>
+       
+   
+</odoo>

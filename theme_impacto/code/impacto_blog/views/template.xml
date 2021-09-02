@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+   <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website assets">
+        <xpath expr="." postion="inside">
+            <link href="/impacto_blog/static/src/scss/blog_style.scss" rel="stylesheet" type="text/scss"/>
+             
+        </xpath>
+    </template>
+   <!--<template id="blog_post_short_custom" inherit_id="website_blog.blog_post_short" priority="1"
+              name="Blog Posts Custom">
+        <xpath expr="//section[@class='mb0']" position="replace">
+            
+                <section class="inner-intro small-intro" style="background-image: url(/vuhu_web/static/src/img/shop-banner-fashion.jpg);" >
+                <div class="container">
+                  <div class="row intro-title">
+                    <div class="col-md-12"><h1 class="title">Get in touch with us</h1></div>
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="page-breadcrumb">                      
+                            <li><a href="/">Home</a></li>
+                            <li>Blog</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </xpath>
+    </template>
+
+    <template id="website_blog.blog_breadcrumb" name="Breadcrumb"
+              inherit_id="website_blog.blog_post_complete" active="False" customize_show="True">
+        <xpath expr="//div[@id='title']" position="before">
+            <section class="inner-intro small-intro dark-bg mb-2" style="background-image: url('/comercio_web/static/src/img/bg/bg-01.jpg'); background-size: cover;">
+                <div class="container">
+                    <div class="row intro-title">
+                        <div class="col-md-12">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a t-attf-href="#{blog_url(tag=None, date_begin=None, date_end=None)}">
+                                        <span t-field="blog.name"/>
+                                    </a>
+                                </li>
+                                <li t-if="tag">
+                                    <a t-attf-href="#{blog_url(date_begin=None, date_end=None)}">
+                                        <span t-field="tag.name"/>
+                                    </a>
+                                </li>
+                                <li t-if="date">
+                                    <a t-attf-href="#{blog_url(tag=None)}" t-esc="date"/>
+                                </li>
+                                <li class="active">
+                                    <span t-field="blog_post.name"/>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>-->
+
+</odoo>

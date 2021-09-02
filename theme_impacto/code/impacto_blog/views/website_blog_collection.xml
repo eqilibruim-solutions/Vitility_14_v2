@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="create_blog_collection_form" model="ir.ui.view">
+    <field name="name">blogcollection.form</field>
+    <field name="model">blogcollection</field>
+    <field name="arch" type="xml">
+      <form string="Blog Slider Collection">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="active"/>
+          </group>
+          <group string="Select Blogs Posts">
+            <field name="blog_ids" no_label="1"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_blog_collection" model="ir.actions.act_window">
+    <field name="name">Blog Slider Configuration</field>
+    <field name="res_model">blogcollection</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+
+  <menuitem id="menu_action_blog_configure" parent="website.menu_website_global_configuration"
+    sequence="101" action="action_blog_collection" name="Blog Slider Collection"/>
+</odoo>

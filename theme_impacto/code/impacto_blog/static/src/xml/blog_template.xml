@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="comercio_web.blog_slider_popup">
+
+    <div class="modal" contenteditable="False" contentEditable="false" backdrop="false" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:2001">
+        <div class="modal-dialog">
+            <div id="s_media_block_modal" class="modal-content">
+                <div class="modal-body" contenteditable="false">
+                    <div id="tab_html5" class="videoTabs">
+                        <form class="form-horizontal container-fluid" role="form">
+                          
+						   <div class="col-sm-12 form-group">
+                                <label for="product-count" class="col-sm-5 control-label">Filter: </label>
+                                <div class="col-sm-7">
+                                	<select id="productcollection" class="form-control">
+									
+                                	</select>
+                                </div>
+                            </div>
+                                 
+                           					
+							 <div  style="display:none;" class="col-sm-12 form-group">
+                                <label for="limit" class="col-sm-5 control-label">Total Post:</label>
+                                <div class="col-sm-7">
+                                	<input type='text'  id="limit" />
+                                </div>
+                            </div>
+						</form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancel" data-dismiss="modal" class="btn btn-primary">Cancel</button>
+                    <button id="submit" data-dismiss="modal" class="btn btn-danger">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</t>
+</templates>
+
