@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ 
+
+  <template id="theme_customizer" inherit_id="website.theme_customize" name="theme Impacto modal">
+    <xpath expr="//div" position="replace">
+			<div>
+        <!-- Color options -->
+        <content id="theme_customize_content_colors" string="Colors" title="Choose the theme colors">
+            <list string="Main">
+                <opt data-widget="color" data-color-type="theme" data-color="primary" string="Primary"/>
+                <opt data-widget="color" data-color-type="theme" data-color="secondary" string="Secondary"/>
+                <opt data-widget="color" data-color-type="theme" data-color="alpha" string="Primary"/>
+                <opt data-widget="color" data-color-type="theme" data-color="beta" string="Secondary"/>
+                <opt data-widget="color" data-color-type="theme" data-color="gamma" string="Extra Color"/>
+                <opt data-widget="color" data-color-type="theme" data-color="delta" string="Extra Color"/>
+                <opt data-widget="color" data-color-type="theme" data-color="epsilon" string="Extra Color"/>
+            </list>
+            <list string="Status">
+                <opt data-widget="color" data-color-type="theme" data-color="success" string="Success"/>
+                <opt data-widget="color" data-color-type="theme" data-color="info" string="Info"/>
+                <opt data-widget="color" data-color-type="theme" data-color="warning" string="Warning"/>
+                <opt data-widget="color" data-color-type="theme" data-color="danger" string="Error"/>
+            </list>
+            <list string="Text">
+                <opt data-widget="color" data-color="text" string="Text"/>
+                <opt data-widget="color" data-color="h1" string="Headings 1"/>
+                <opt data-widget="color" data-color="h2" string="Headings 2"/>
+                <opt data-widget="color" data-color="h3" string="Headings 3"/>
+                <opt data-widget="color" data-color="h4" string="Headings 4"/>
+                <opt data-widget="color" data-color="h5" string="Headings 5"/>
+                <opt data-widget="color" data-color="h6" string="Headings 6"/>
+            </list>
+            <list string="Background">
+                <opt data-widget="color" data-color="body" string="Body"/>
+                <opt data-widget="color" data-color="menu" string="Menus"/>
+                <opt data-widget="color" data-color="footer" string="Footer"/>
+            </list>
+        </content>
+
+        <!-- Menu options -->
+        <content id="theme_customize_content_navbar" string="Navbar" title="Choose your navbar">
+            <list string="Main Layout">
+                <checkbox><opt data-xmlid="website.affix_top_menu" data-reload="/"/></checkbox>
+                <checkbox><opt data-xmlid="portal.portal_show_sign_in" data-reload="/"/></checkbox>
+                <opt data-widget="input" data-unit="rem" data-variable="header-font-size" string="Font Size"/>
+            </list>
+            <list string="Logo">
+                <checkbox><opt data-xmlid="website.layout_logo_show" data-reload="/"/></checkbox>
+                <opt data-widget="input" data-unit="rem" data-variable="logo-height" string="Logo Height"/>
+            </list>
+        </content>
+
+        <!-- Layout Options -->
+        <content id="theme_customize_content_layout" string="Layout" title="Choose your layout">
+            <list string="Body">
+                <opt string="Full" data-xmlid="" data-icon="/website/static/src/img/options/layout-full.png"/>
+                <opt id="option_layout_boxed" string="Boxed" data-xmlid="website.option_layout_boxed_variables" data-icon="/website/static/src/img/options/layout-boxed.png"/>
+            </list>
+            <list string="Background">
+                <opt id="option_no_background" string="None" data-xmlid=""/>
+                <opt string="Choose an image" data-xmlid="website.option_custom_body_image"/>
+                <opt string="Choose a pattern" data-xmlid="website.option_custom_body_image, website.option_custom_body_pattern"/>
+            </list>
+        </content>
+		 <!-- Header Options -->
+		<content id="theme_customize_customize_header" string="Header" title="Select header">
+            <more data-depends="">
+                <list id="customheader" string="Header" >                    
+                    <opt id="opt_header_style_2" string="Header 1" data-xmlid="theme_impacto.header_style_2" data-icon="/theme_impacto/static/src/img/customize/header-1.jpg"  data-reload="/"/>
+                    
+                    <opt id="opt_header_style_4" string="Header 2" data-xmlid="theme_impacto.header_style_4" data-icon="/theme_impacto/static/src/img/customize/header-2.jpg" data-reload="/"/>
+                    
+                    <opt id="opt_header_style_1" string="Header 3" data-xmlid="theme_impacto.header_style_1" data-icon="/theme_impacto/static/src/img/customize/header-3.jpg" data-reload="/"/>
+                    
+                    <opt id="opt_header_style_3" string="Header 4" data-xmlid="theme_impacto.header_style_3" data-icon="/theme_impacto/static/src/img/customize/header-4.jpg" data-reload="/"/>
+                    
+                    <opt id="opt_header_style_6" string="Header 5" data-xmlid="theme_impacto.header_style_6" data-icon="/theme_impacto/static/src/img/customize/header-5.jpg" data-reload="/"/>
+               
+                     <opt id="opt_header_style_7" string="Header 6" data-xmlid="theme_impacto.header_style_7" data-icon="/theme_impacto/static/src/img/customize/header-6.jpg" data-reload="/"/>    
+                </list>
+            </more>
+        </content>
+        
+        <!-- Font options -->
+        <content id="theme_customize_content_fonts" string="Fonts" title="Choose your fonts">
+            <list string="Title">
+                <fontselection data-variable="headings-font-number"/>
+            </list>
+            <list string="Body">
+                <fontselection data-variable="font-number"/>
+            </list>
+            <list string="Button">
+                <fontselection data-variable="buttons-font-number"/>
+            </list>
+            <list string="Navbar">
+                <fontselection data-variable="navbar-font-number"/>
+            </list>
+        </content>
+    </div>
+
+        
+  
+	</xpath>
+  </template>
+   <!-- ===================== Header Style ======================== -->
+
+  <template id="header_style_2_css" name="header_style_2_scss" inherit_id="website.assets_frontend" active="True" priority="18">
+        <xpath expr="." position="inside"><link href="/theme_impacto/static/src/scss/theme_option/header-option/header-light.scss" rel="stylesheet" type="text/scss"/></xpath>
+   </template>
+   <template id="header_style_1_css" name="header_style_1_scss" inherit_id="website.assets_frontend" active="False" priority="18">
+        <xpath expr="." position="inside"><link href="/theme_impacto/static/src/scss/theme_option/header-option/header-dark.scss" rel="stylesheet" type="text/scss"/></xpath>
+    </template>
+	<template id="header_style_3_css" name="header_style_3_scss" inherit_id="website.assets_frontend" active="False" priority="18">
+        <xpath expr="." position="inside"><link href="/theme_impacto/static/src/scss/theme_option/header-option/header-default.scss" rel="stylesheet" type="text/scss"/></xpath>
+    </template>
+	<template id="header_style_4_css" name="header_style_4_scss" inherit_id="website.assets_frontend" active="False" priority="18">
+        <xpath expr="." position="inside"><link href="/theme_impacto/static/src/scss/theme_option/header-option/header-hamburger.scss" rel="stylesheet" type="text/scss"/></xpath>
+    </template>
+	<template id="header_style_6_css" name="header_style_6_scss" inherit_id="website.assets_frontend" active="False" priority="18">
+        <xpath expr="." position="inside"><link href="/theme_impacto/static/src/scss/theme_option/header-option/header-transparent.scss" rel="stylesheet" type="text/scss"/></xpath>
+    </template>
+	<template id="header_style_7_css" name="header_style_7_scss" inherit_id="website.assets_frontend" active="False" priority="18">
+        <xpath expr="." position="inside"><link href="/theme_impacto/static/src/scss/theme_option/header-option/header-fancy.scss" rel="stylesheet" type="text/scss"/></xpath>
+    </template>
+<!-- ===================== Header template ======================== -->
+   
+</odoo>
+

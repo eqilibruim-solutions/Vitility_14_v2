@@ -1,0 +1,208 @@
+.oe_product_cart, .oe_product_cart .o_wsale_product_btn .btn:hover {
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	-moz-transition: all 0.5s ease-in-out 0s;
+	-ms-transition: all 0.5s ease-in-out 0s;
+	-o-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+#products_grid .oe_subdescription {
+	display: none;
+}
+
+#products_grid.o_wsale_layout_list .oe_subdescription {
+	display: block;
+}
+
+.oe_product_cart:hover .o_wsale_product_information {
+	background-color: inherit !important;
+}
+
+.oe_product_cart .o_wsale_product_btn .btn {
+	background: #fff;
+	transition: transform ease 800ms 0s;
+	border: 1px solid #dee2e6;
+	color: #0A78E4;
+	padding: 8px 25px;
+}
+
+.oe_product_cart .o_wsale_product_btn .btn:hover {
+	background: #0A78E4;
+	border: 1px solid #0A78E4;
+	color: #fff;
+}
+
+.sp_shop_header {
+	padding: 50px 0;
+	text-align: center;
+}
+
+.products_pager .o_wsale_products_searchbar_form {
+	display: none;
+}
+
+.products_pager .btn {
+	background: none;
+	border: 1px solid #dee2e6;
+	color: #000;
+	padding: 8px 20px;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+
+.products_pager .btn-secondary:not(:disabled):not(.disabled):active, .products_pager .btn-secondary:not(:disabled):not(.disabled).active, .products_pager .show > .btn-secondary.dropdown-toggle {
+	background-color: #0A78E4;
+	border-color: #0A78E4;
+	color: #fff;
+}
+
+.products_pager .btn-secondary:focus, .products_pager .btn-secondary.focus, .page-link:focus, .products_pager .btn-secondary:not(:disabled):not(.disabled):active:focus, .products_pager .btn-secondary:not(:disabled):not(.disabled).active:focus, .products_pager .show > .btn-secondary.dropdown-toggle:focus {
+	box-shadow: none;
+}
+
+.products_pager .dropdown_sorty_by .btn {
+	border: 1px solid #dee2e6;
+}
+
+.pagination li {
+	border-right: 1px solid #dee2e6;
+}
+
+.pagination li:last-child {
+	border-right: none;
+}
+
+.products_pager .pagination > li a {
+	border: none;
+	background: none;
+	min-width: 32px;
+	line-height: inherit;
+	height: inherit;
+	text-align: center;
+	margin: 0;
+}
+
+.products_pager .pagination > li:first-child > a, .products_pager .pagination > li:first-child > span, .products_pager .pagination > li:last-child > a, .products_pager .pagination > li:last-child > span {
+	height: inherit;
+	line-height: inherit;
+}
+
+.products_pager .pagination li a:hover, .products_pager .pagination li.active a {
+	background: none;
+	color: #0A78E4;
+}
+
+#products_grid_before .js_attributes > .nav-pills > li.nav-item, #wsale_products_categories_collapse {
+	padding: 15px;
+	border: 1px solid #dee2e6;
+	margin-bottom: 30px;
+}
+
+#products_grid_before .nav-pills > li .nav-pills {
+	margin-left: 0;
+}
+
+#products_grid_before .nav-pills > li .nav-pills li label {
+	margin: 0 !important;
+	padding: 0;
+}
+
+#products_grid_before div strong {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	width: 100%;
+	display: inline-block;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+#products_grid_before .mb-2 {
+	margin-bottom: 0 !important
+}
+
+#products_grid_before ul a {
+	color: #969696;
+	padding: 0;
+	font-size: 15px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color: #0A78E4 !important;
+	background-color: inherit;
+}
+
+#product_detail .o_wsale_products_searchbar_form {
+	display: none;
+}
+
+
+.oe_website_sale input.quantity {
+    width: 50px;
+    height: 48px;
+    border-width: 1px;
+}
+.css_quantity .btn {
+    padding: 0 20px;
+line-height: 48px;
+height: 48px;
+}
+
+.css_quantity .btn-secondary {
+    background-color: inherit;
+    border-color: #dee2e6;
+    color: #000;
+    border-width: 1px;
+}
+
+#product_details .css_quantity {
+    max-width: inherit;
+    width: auto;
+}
+
+#product_details #add_to_cart {
+    padding: 13px 20px;
+    float: right;
+}
+
+#product_option_block {
+    display: flex;
+    float: none;
+    width: 100%;
+}
+
+.variant_attribute .attribute_name {
+
+    padding-bottom: 0.5rem;
+    display: block;
+    font-size: 0.875rem;
+	color: #000;
+
+}
+
+.oe_website_sale ul ul {
+
+    margin-left: 0;
+
+}
+
+
+.shop_breadcrumb .container{display: flex;
+align-items: center;}
+
+
+#o-carousel-product .carousel-indicators li {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 0;
+}
+
+#o-carousel-product .carousel-indicators li.active {
+    border: none;
+}
+.o_image_64_contain {
+    width: 100px;
+    height: 100px;
+}
