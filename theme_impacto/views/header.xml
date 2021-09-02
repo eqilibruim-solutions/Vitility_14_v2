@@ -121,7 +121,7 @@
                                          <button type="button" class="close">×</button>
                                       </form>
                                     </div>
-                                    <div class="btn-group dropdown">
+                                    <!--<div class="btn-group dropdown">
                                             <t t-set="website_sale_order" t-value="website.sale_get_order()"/>
 
                                             <button type="button" class="dropdown-toggle" data-toggle="dropdown">
@@ -136,7 +136,7 @@
                                                 id="shop-cart">
                                                 <li><t t-call="website_sale.cart_popover"/></li>
                                             </ul>
-                                        </div>
+                                        </div>-->
                                  </div>
                               </div>
                               <nav class="navbar navbar-default header-dropdown-phone" role="navigation">
