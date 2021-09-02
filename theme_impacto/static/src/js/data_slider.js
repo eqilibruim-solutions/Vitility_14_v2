@@ -1,11 +1,9 @@
-/* Copyright 2016 LasLabs Inc.
- * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
- */
 
-odoo.define('theme_impacto.website_snippet_data_slider', function(require){
+odoo.define('theme_impacto.data_slider', function(require){
   "use strict";
     
-    var animation = require('web_editor.snippets.animation');
+  //  var animation = require('web_editor.snippets.animation');
+   var sAnimation = require('website.content.snippets.animation');
     
     var defaults = {
         lazyLoad: 'ondemand',
@@ -32,7 +30,7 @@ odoo.define('theme_impacto.website_snippet_data_slider', function(require){
         data_limit: 10,
     };
     
-    animation.registry.data_slider = animation.Class.extend({
+    sAnimation.registry.data_slider = sAnimation.Class.extend({
         selector: ".o_data_slider",
         
         slickSetOption: function(event, key, val) {
@@ -121,9 +119,12 @@ odoo.define('theme_impacto.website_snippet_data_slider', function(require){
         
         getRecords: function() {
             // Explicitly encode the data structures to preserve during transfer 
+            //alert(JSON.stringify(this.fields));
+            //alert(JSON.stringify(this.domain));
+            //alert(JSON.stringify(this.model));
             return $.ajax({
                 url: '/website/data_slider/' + this.model,
-                method: 'GET',
+                method: 'POST',
                 data: {
                     domain: JSON.stringify(this.domain),
                     fields: JSON.stringify(this.fields),
@@ -137,7 +138,7 @@ odoo.define('theme_impacto.website_snippet_data_slider', function(require){
   
     return {
         defaults: defaults,
-        DataSlider: animation.registry.data_slider,
+        DataSlider: sAnimation.registry.data_slider,
     };
   
 });
