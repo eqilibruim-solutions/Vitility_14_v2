@@ -10,7 +10,7 @@
     'author': 'Adventumweb',
     'support': 'megatheme@gmail.com',
     'license' : 'OPL-1',
-    'depends': ['website', 'website_theme_install'],
+    'depends': ['website', 'website_theme_install', 'sale'],
     'data': [
     'security/ir.model.access.csv',
         'views/assets.xml',
