@@ -1,7 +1,7 @@
 import werkzeug
 from odoo import http
 from odoo.http import request
-from odoo.addons.website.models.website import slug
+from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.website.controllers.main import QueryURL
 
 PPG = 21  # Products Per Page

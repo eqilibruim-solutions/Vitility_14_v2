@@ -11,19 +11,20 @@
     'depends': [
         'website',
         'website_crm',
+        'web',
         'theme_common',
         'auth_signup',
         'website_sale'],
     'data': [   
         'views/customize_modal.xml',
          'views/assets.xml',
-		  'views/shop.xml',
-         'views/page_login.xml',
-		'views/snippets.xml',
-        'views/snippets_option.xml',
-		'views/header.xml',
-        'views/footer.xml',
-        'views/page_login_business.xml'
+#		  'views/shop.xml',
+#         'views/page_login.xml',
+#		'views/snippets.xml',
+#        'views/snippets_option.xml',
+#		'views/header.xml',
+#        'views/footer.xml',
+#        'views/page_login_business.xml'
     ],
     'images': [
       'static/description/impacto.jpg',
