@@ -1,0 +1,1414 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* theme_impacto
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-15 09:47+0000\n"
+"PO-Revision-Date: 2020-09-15 09:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "#accessories"
+msgstr "#accessories"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "#chair color decor"
+msgstr "#chair color decor"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+msgid "$.29"
+msgstr "$.29"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "$150<span>/Per month</span>"
+msgstr "$150<span>/Per month</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card02
+msgid "$16,45"
+msgstr "$16,45"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card02
+msgid "$19,95"
+msgstr "$19,95"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "$250<span>/Per month</span>"
+msgstr "$250<span>/Per month</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "1 post"
+msgstr "1 post"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "10 posts"
+msgstr "10 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "2 posts"
+msgstr "2 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "3 posts"
+msgstr "3 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "4 posts"
+msgstr "4 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "475+ We completed marketing"
+msgstr "475+ We completed marketing"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "475+ We created mobile app"
+msgstr "475+ We created mobile app"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "5 posts"
+msgstr "5 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "50%"
+msgstr "50%"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "6 posts"
+msgstr "6 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "600+ We created web design"
+msgstr "600+ We created web design"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "7 posts"
+msgstr "7 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "8 posts"
+msgstr "8 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "9 posts"
+msgstr "9 posts"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<i class=\"fa fa-building-o fa-lg fa-fw\"/><b>Inloggen Bedrijven</b>"
+msgstr "<i class=\"fa fa-building-o fa-lg fa-fw\"/><b>Anmelden Unternehmen</b>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<i class=\"fa fa-envelope\"/>\n"
+"                                    info@vitility.com"
+msgstr "<i class=\"fa fa-envelope\"/>\n"
+"                                    info@vitility.com"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "<i class=\"fa fa-eye\"/> View"
+msgstr "<i class=\"fa fa-eye\"/> View"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<i class=\"fa fa-phone\"/>\n"
+"                                         +31(0)13 - 543 4687"
+msgstr "<i class=\"fa fa-phone\"/>\n"
+"                                         +31(0)13 - 543 4687"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "<i class=\"fa fa-shopping-cart\"/>\n"
+"                                                             Cart"
+msgstr "<i class=\"fa fa-shopping-cart\"/>\n"
+"                                                             Cart"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "<i class=\"fa fa-shopping-cart\"/>\n"
+"                                                           Cart"
+msgstr "<i class=\"fa fa-shopping-cart\"/>\n"
+"                                                           Cart"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<i class=\"fa fa-sign-out fa-lg fa-fw\"/>Uitloggen"
+msgstr "<i class=\"fa fa-fw fa-lg fa-sign-out\"/>Abmeldung"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<i class=\"fa fa-user fa-lg fa-fw\"/><b>Inloggen particulieren</b>"
+msgstr "<i class=\"fa fa-user fa-lg fa-fw\"/><b>Personen anmelden</b>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<i class=\"fa fa-user-plus fa-lg fa-fw\"/><b> Mijn Account</b>"
+msgstr "<i class=\"fa fa-user-plus fa-lg fa-fw\"/><b> Mein&amp;nbsp;Konto</b>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial01
+msgid "<span class=\"author-name\">- John Doe </span><br/>"
+msgstr "<span class=\"author-name\">- John Doe </span><br/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial02
+msgid "<span class=\"author-name\">John Doe</span>\n"
+"                    <span class=\"author-title\">Company CEO</span>"
+msgstr "<span class=\"author-name\">John Doe</span>\n"
+"                    <span class=\"author-title\">Company CEO</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<span class=\"sr-only\">Toggle navigation</span>\n"
+"                                                        <span class=\"icon-bar\"/>\n"
+"                                                        <span class=\"icon-bar\"/>\n"
+"                                                        <span class=\"icon-bar\"/>"
+msgstr "<span class=\"sr-only\">Toggle navigation</span>\n"
+"                                                        <span class=\"icon-bar\"/>\n"
+"                                                        <span class=\"icon-bar\"/>\n"
+"                                                        <span class=\"icon-bar\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "<span class=\"sr-only\">Toggle navigation</span>\n"
+"                                    <span class=\"icon-bar\"/>\n"
+"                                    <span class=\"icon-bar\"/>\n"
+"                                    <span class=\"icon-bar\"/>"
+msgstr "<span class=\"sr-only\">Toggle navigation</span>\n"
+"                                    <span class=\"icon-bar\"/>\n"
+"                                    <span class=\"icon-bar\"/>\n"
+"                                    <span class=\"icon-bar\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "<span class=\"theme-text\">01.</span> Management"
+msgstr "<span class=\"theme-text\">01.</span> Management"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "<span class=\"theme-text\">02.</span> Development"
+msgstr "<span class=\"theme-text\">02.</span> Development"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "<span class=\"theme-text\">03.</span> Fast support"
+msgstr "<span class=\"theme-text\">03.</span> Fast support"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "<span class=\"timer\" data-to=\"250\" data-speed=\"1000\">250</span>"
+msgstr "<span class=\"timer\" data-to=\"250\" data-speed=\"1000\">250</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "<span class=\"timer\" data-to=\"355\" data-speed=\"1000\">355</span>"
+msgstr "<span class=\"timer\" data-to=\"355\" data-speed=\"1000\">355</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "<span class=\"timer\" data-to=\"400\" data-speed=\"1000\">400</span>"
+msgstr "<span class=\"timer\" data-to=\"400\" data-speed=\"1000\">400</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "<span class=\"timer\" data-to=\"700\" data-speed=\"1000\">700</span>"
+msgstr "<span class=\"timer\" data-to=\"700\" data-speed=\"1000\">700</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_cart
+msgid "<span itemprop=\"name\">Products</span>"
+msgstr "<span itemprop=\"name\">Products</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Lato</span>"
+msgstr "<span>Lato</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Merriweather</span>"
+msgstr "<span>Merriweather</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Open Sans</span>"
+msgstr "<span>Open Sans</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>PT Sans</span>"
+msgstr "<span>PT Sans</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>PT Serif</span>"
+msgstr "<span>PT Serif</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Playfair Display</span>"
+msgstr "<span>Playfair Display</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Poppins</span>"
+msgstr "<span>Poppins</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "<span>Sed do eiusmod</span>"
+msgstr "<span>Sed do eiusmod</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Slabo 27px</span>"
+msgstr "<span>Slabo 27px</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "<span>Work Sans</span>"
+msgstr "<span>Work Sans</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+msgid "<strong>Database</strong>"
+msgstr "<strong>Database</strong>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "<strong>Speciality:</strong> Cardiologist<br/>\n"
+"              <strong>Degrees:</strong> M.B.B.S"
+msgstr "<strong>Speciality:</strong> Cardiologist<br/>\n"
+"              <strong>Degrees:</strong> M.B.B.S"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "<strong>Speciality:</strong> Pediatrician<br/>\n"
+"              <strong>Degrees:</strong> M.B.B.S"
+msgstr "<strong>Speciality:</strong> Pediatrician<br/>\n"
+"              <strong>Degrees:</strong> M.B.B.S"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "<strong>Speciality:</strong> Rehabilitation Therapy<br/>\n"
+"              <strong>Degrees:</strong> M.B.B.S"
+msgstr "<strong>Speciality:</strong> Rehabilitation Therapy<br/>\n"
+"              <strong>Degrees:</strong> M.B.B.S"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+msgid "ABOUT US"
+msgstr "ABOUT US"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "About Us"
+msgstr "About Us"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "About us"
+msgstr "Über uns"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "Abuot Us"
+msgstr "Abuot Us"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Accordion Style"
+msgstr "Accordion Style"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/html_block.xml:12
+#, python-format
+msgid "Add HTML"
+msgstr "Add HTML"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer5
+msgid "Address"
+msgstr "Adresse"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "All blogs"
+msgstr "All blogs"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+msgid "Alle producten"
+msgstr "Alle Produkte"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "Allow Us To Introduce Ourselves"
+msgstr "Allow Us To Introduce Ourselves"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "Antonio Creighton"
+msgstr "Antonio Creighton"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/html_block.xml:18
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:36
+#, python-format
+msgid "Apply"
+msgstr "Apply"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti  dolores."
+msgstr "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti  dolores."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "Awords Wininng"
+msgstr "Awords Wininng"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_latest_posts
+msgid "BLOG POSTS"
+msgstr "BLOG POSTS"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+msgid "Basic"
+msgstr "Basic"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Bed &amp;amp; Bad"
+msgstr "Bett &amp;amp; Bad"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Blog"
+msgstr "Blog"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "Body\n"
+"                              <span class=\"caret\"/>"
+msgstr "Body\n"
+"                              <span class=\"caret\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_banner01
+msgid "Business"
+msgstr "Business"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "Business Consulting"
+msgstr "Business Consulting"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born."
+msgstr "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Button Style"
+msgstr "Button Style"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "CREATIVE DIRECTOR"
+msgstr "CREATIVE DIRECTOR"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer5
+msgid "Call Us"
+msgstr "Call Us"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/html_block.xml:17
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:35
+#, python-format
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_cart
+msgid "Cart"
+msgstr "Cart"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+msgid "Chair"
+msgstr "Chair"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:24
+#, python-format
+msgid "Chart Color"
+msgstr "Chart Color"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:12
+#, python-format
+msgid "Chart Per"
+msgstr "Chart Per"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:18
+#, python-format
+msgid "Chart Width"
+msgstr "Chart Width"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial01
+msgid "Company CEO"
+msgstr "Company CEO"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "Complete testing of a web-based system before going life can help address issues before the system is revealed to the public."
+msgstr "Complete testing of a web-based system before going life can help address issues before the system is revealed to the public."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "Completed Projects"
+msgstr "Completed Projects"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+msgid "Connect with us"
+msgstr "Nehmen Sie Kontakt auf"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Consectetur Adipisicing  <i class=\"fa fa-check\"/>"
+msgstr "Consectetur Adipisicing  <i class=\"fa fa-check\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "Construction Management"
+msgstr "Construction Management"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+msgid "Contact Info"
+msgstr "Contact Info"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Contact us"
+msgstr "Kontakt"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+msgid "Create Account"
+msgstr "Create Account"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Customer Support"
+msgstr "Customer Support"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "Customize this default theme"
+msgstr "Customize this default theme"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "DIGITAL DIRECTOR"
+msgstr "DIGITAL DIRECTOR"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Default"
+msgstr "Default"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "Design &amp; Build"
+msgstr "Design &amp; Build"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "Design and Development"
+msgstr "Design and Development"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Development"
+msgstr "Development"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Dolor sit Amet <i class=\"fa fa-check\"/>"
+msgstr "Dolor sit Amet <i class=\"fa fa-check\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_banner01
+msgid "Donec vel sagittis neque, sit amet porttitor ex. Phasellus metus sem, efficitur eu accumsan eu aliquam id ligula."
+msgstr "Donec vel sagittis neque, sit amet porttitor ex. Phasellus metus sem, efficitur eu accumsan eu aliquam id ligula."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "Dr. Micheal Jorden"
+msgstr "Dr. Micheal Jorden"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Eiusmod Tempor <i class=\"fa fa-check\"/>"
+msgstr "Eiusmod Tempor <i class=\"fa fa-check\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Email"
+msgstr "E-Mail"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer5
+msgid "Email Us"
+msgstr "Email Us"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_snippet_embed
+msgid "Embed HTML here"
+msgstr "Embed HTML here"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_latest_posts
+msgid "Enterprises seeking a digital edge transform processes, business models and the best customer experience by exploiting digital connections."
+msgstr "Enterprises seeking a digital edge transform processes, business models and the best customer experience by exploiting digital connections."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "FONTS COMBINATIONS"
+msgstr "FONTS COMBINATIONS"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+msgid "Faq"
+msgstr "Faq"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "Footer"
+msgstr "Footer"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "Frederick Smith"
+msgstr "Frederick Smith"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+msgid "Free"
+msgstr "Verfügbar"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+msgid "Furniture Design"
+msgstr "Furniture Design"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card02
+msgid "Fusce a tellus tellus. Praesent neque arcu, efficitur sit amet libero vulputate, dignissim."
+msgstr "Fusce a tellus tellus. Praesent neque arcu, efficitur sit amet libero vulputate, dignissim."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "General Consulting"
+msgstr "General Consulting"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Gezondheid &amp;amp; fitness"
+msgstr "Gesundheit &amp;amp; Fitness"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Gradiant"
+msgstr "Gradiant"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "Great Team Support"
+msgstr "Great Team Support"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial02
+msgid "Great theme maker. I wish they would create more themes."
+msgstr "Great theme maker. I wish they would create more themes."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "Happy Clients"
+msgstr "Happy Clients"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "Head of Department"
+msgstr "Head of Department"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "Header"
+msgstr "Header"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "Heading\n"
+"                              <span class=\"caret\"/>"
+msgstr "Heading\n"
+"                              <span class=\"caret\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Home"
+msgstr "Home"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.countersnp
+msgid "Hours Of Work"
+msgstr "Hours Of Work"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Huishouden &amp;amp; wonen"
+msgstr "Haushalt &amp;amp; Wohnen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+msgid "Identity Branding"
+msgstr "Identity Branding"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Inloggen"
+msgstr "Login"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Inloggen bedrijven"
+msgstr "Login Unternehmen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+msgid "Inloggen particulieren"
+msgstr "Inloggen particulieren"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "It is a range of customer services to assist customers in making cost effective and correct use of a product."
+msgstr "It is a range of customer services to assist customers in making cost effective and correct use of a product."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "It is a vital part of developing new products. At every stage of the process, research can help you identify key issues and avoid mistakes."
+msgstr "It is a vital part of developing new products. At every stage of the process, research can help you identify key issues and avoid mistakes."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Kantoor &amp;amp; vrijetijd"
+msgstr "Büro &amp;amp; Freizeit"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Keuken &amp;amp; Eetkamer"
+msgstr "Küche &amp;amp; Essen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Let op, zowel uw email als wachtwoord zijn hoofdletter gevoelig"
+msgstr "Bitte beachten Sie, dass sowohl der Benutzername als auch das Passwort zwischen Groß- und Kleinschreibung unterscheiden"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Limit by blog"
+msgstr "Limit by blog"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Limit number to..."
+msgstr "Limit number to..."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "Logout"
+msgstr "Abmelden"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Lorem Ipsum <i class=\"fa fa-check\"/>"
+msgstr "Lorem Ipsum <i class=\"fa fa-check\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+msgstr "Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+msgid "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, Etiam mollis libero."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, Etiam mollis libero."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, sed do eiusmod tempor."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim, sed do eiusmod tempor."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "Lorem ipsum dolor sit amet,consec tetur adipisicing elit,sed do eiusmo"
+msgstr "Lorem ipsum dolor sit amet,consec tetur adipisicing elit,sed do eiusmo"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "Lorem ipsum dolor sit amet,consec tetur adipisicing elit,sed do eiusmod"
+msgstr "Lorem ipsum dolor sit amet,consec tetur adipisicing elit,sed do eiusmod"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "MAIN COLOR"
+msgstr "MAIN COLOR"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "Mobile App Development"
+msgstr "Mobile App Development"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Mobiliteit"
+msgstr "Mobilität"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+msgid "Navigation"
+msgstr "Navigation"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+msgid "New <span class=\"f-weight-100\">Collection</span>"
+msgstr "New <span class=\"f-weight-100\">Collection</span>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Nieuw bij Vitility?"
+msgstr "Neu bei vitility?"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.no_blog_posts
+msgid "No posts here..."
+msgstr "No posts here..."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Not any hidden<br/>\n"
+"            charge, Choose you<br/>\n"
+"            pricing plan"
+msgstr "Not any hidden<br/>\n"
+"            charge, Choose you<br/>\n"
+"            pricing plan"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:30
+#, python-format
+msgid "Notes:"
+msgstr "Notes:"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "OFF EVERYTHING"
+msgstr "OFF EVERYTHING"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "OUR PRICING"
+msgstr "OUR PRICING"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "OUR SERVICES"
+msgstr "OUR SERVICES"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Online Marketing"
+msgstr "Online Marketing"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/js/theme.snippets.editor.js:269
+#: code:addons/theme_impacto/static/src/js/theme_snippets_editor.js:267
+#, python-format
+msgid "Oops, Huston we have a problem"
+msgstr "Oops, Huston we have a problem"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial02
+msgid "Our Client"
+msgstr "Our Client"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "Our Creative Staff"
+msgstr "Our Creative Staff"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_latest_posts
+msgid "Our Last News"
+msgstr "Our Last News"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+msgid "Our Price"
+msgstr "Our Price"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.data_slider_snippet
+#: model:ir.ui.view,arch_db:theme_impacto.data_slider_snippet2
+msgid "Our Product"
+msgstr "Our Product"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+msgid "Our Products &amp; Services"
+msgstr "Unser Angebot"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "Our Team"
+msgstr "Unser Team"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+msgid "Our products are designed for small to medium size companies willing to optimize\n"
+"                                    their performance."
+msgstr "Our products are designed for small to medium size companies willing to optimize\n"
+"                                    their performance."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_product
+msgid "Outlet"
+msgstr "Outlet"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_website_sale_products
+msgid "Outlet Incontinentie"
+msgstr "Outlet Incontinentie"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Outline"
+msgstr "Outline"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "PARTNER &amp; CEO"
+msgstr "PARTNER &amp; CEO"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Password"
+msgstr "Passwort"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+msgid "Photography"
+msgstr "Photography"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.no_blog_posts
+msgid "Please, be sure that your posts are not in draft state"
+msgstr "Please, be sure that your posts are not in draft state"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Policy &amp; privacy"
+msgstr "Policy &amp; privacy"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Premium"
+msgstr "Premium"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Purchase Now <i class=\"fa fa-cart-arrow-down\" aria-hidden=\"true\"/>"
+msgstr "Purchase Now <i class=\"fa fa-cart-arrow-down\" aria-hidden=\"true\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_banner01
+msgid "Read More <i class=\"fa fa-arrow-circle-right\"/>"
+msgstr "Read More <i class=\"fa fa-arrow-circle-right\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "Ream more"
+msgstr "Ream more"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "Reasonable prices"
+msgstr "Reasonable prices"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "SALE"
+msgstr "SALE"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "SEO &amp; SMM services"
+msgstr "SEO &amp; SMM services"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+msgid "SOFA Design"
+msgstr "SOFA Design"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "SPECIAL SALE"
+msgstr "SPECIAL SALE"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.products_list_view
+msgid "Sale"
+msgstr "Verkauf"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "Samanta Jonson"
+msgstr "Samanta Jonson"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "Search"
+msgstr "Suchen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "Search <i style=\"color: #fff\" class=\"fa fa-search\"/>"
+msgstr "Search <i style=\"color: #fff\" class=\"fa fa-search\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+msgid "Select\n"
+"                                                        <i class=\"fa fa-database\"/>"
+msgstr "Select\n"
+"                                                        <i class=\"fa fa-database\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Services"
+msgstr "Dienstleistungen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Shadow"
+msgstr "Shadow"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Shop"
+msgstr "Shop"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner01
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "Shop Now"
+msgstr "Shop Now"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "Social Media Marketing"
+msgstr "Social Media Marketing"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "Special Projects"
+msgstr "Special Projects"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.shopbanner02
+msgid "Spring Looks"
+msgstr "Spring Looks"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "Standard"
+msgstr "Standard"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Style &amp; Identity"
+msgstr "Style &amp; Identity"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Style 2"
+msgstr "Style 2"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Style 3"
+msgstr "Style 3"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Style 4"
+msgstr "Style 4"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.s_banner01
+msgid "Success"
+msgstr "Erfolgreich"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.All_snippet_options
+msgid "Tab Style"
+msgstr "Tab Style"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.customize_modal
+msgid "Tagline\n"
+"                              <span class=\"caret\"/>"
+msgstr "Tagline\n"
+"                              <span class=\"caret\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "Team"
+msgstr "Team"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "Term &amp; Condition"
+msgstr "Term &amp; Condition"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+msgid "Terms &amp; Conditions"
+msgstr "Geschäftsbedingungen"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+#: model:ir.ui.view,arch_db:theme_impacto.team02
+msgid "The best team available"
+msgstr "The best team available"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "The process of economic and social that is based on complex cultural and environmental factors and their interactions."
+msgstr "The process of economic and social that is based on complex cultural and environmental factors and their interactions."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "The process of economic and social transformation that is based on complex cultural factors."
+msgstr "The process of economic and social transformation that is based on complex cultural factors."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+msgid "Typography"
+msgstr "Typography"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+msgid "UI/UX Design"
+msgstr "UI/UX Design"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+msgid "Usefull Link"
+msgstr "Usefull Link"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "VITILITY"
+msgstr "VITILITY"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Video Production"
+msgstr "Video Production"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_navbar
+msgid "Vitility logo"
+msgstr "Vitility logo"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "WHAT WE DO"
+msgstr "WHAT WE DO"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "WHO WE ARE"
+msgstr "WHO WE ARE"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_login_form
+#: model:ir.ui.view,arch_db:theme_impacto.login_business
+msgid "Wachtwoord vergeten?"
+msgstr "Passwort vergessen?"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "We Make Creative Solutions"
+msgstr "We Make Creative Solutions"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.Custom_footer1
+msgid "We are a team of passionate people whose goal is to improve everyone's\n"
+"                                    life through disruptive products. We build great products to solve your\n"
+"                                    business problems."
+msgstr "We are a team of passionate people whose goal is to improve everyone's\n"
+"                                    life through disruptive products. We build great products to solve your\n"
+"                                    business problems."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "We are creative and interactive business agency, we make creative projects. View some of the most successful projects. Passion, ideas, and ambition."
+msgstr "We are creative and interactive business agency, we make creative projects. View some of the most successful projects. Passion, ideas, and ambition."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card01
+msgid "We are delivering beautiful digital"
+msgstr "We are delivering beautiful digital"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "We are responsible"
+msgstr "We are responsible"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+msgid "We create brand new <br/> corporate identities"
+msgstr "We create brand new <br/> corporate identities"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+msgid "We create brand new corporate identities"
+msgstr "We create brand new corporate identities"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+msgid "We create things people love."
+msgstr "We create things people love."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing02
+msgid "We have differe type of pricing table to choose with\n"
+"          your need with resonable price."
+msgstr "We have differe type of pricing table to choose with\n"
+"          your need with resonable price."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.skill
+msgid "We make creative projects for awesome clients"
+msgstr "We make creative projects for awesome clients"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+#: model:ir.ui.view,arch_db:theme_impacto.about02
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+#: model:ir.ui.view,arch_db:theme_impacto.service02
+msgid "We make websites are the number one ranked design and marketing team. We build unique and beautiful websites that will make you more successful."
+msgstr "We make websites are the number one ranked design and marketing team. We build unique and beautiful websites that will make you more successful."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful."
+msgstr "We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+msgid "We provide free initial consultation and support."
+msgstr "We provide free initial consultation and support."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about04
+msgid "We provide wide range of <br/> web &amp; business services."
+msgstr "We provide wide range of <br/> web &amp; business services."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.team01
+msgid "We work to make your business start effectively working for you. Meet the financial and marketing specialists. These guys create a magic."
+msgstr "We work to make your business start effectively working for you. Meet the financial and marketing specialists. These guys create a magic."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about01
+msgid "We work with some of the most successful businesses."
+msgstr "We work with some of the most successful businesses."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "We're Impacto Agency"
+msgstr "We're Impacto Agency"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.about03
+msgid "Web Design"
+msgstr "Web Design"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Web design encompasses many different skills and disciplines in the production of websites."
+msgstr "Web design encompasses many different skills and disciplines in the production of websites."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.service01
+msgid "Website Design"
+msgstr "Website Design"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial02
+msgid "What They are Saying"
+msgstr "What They are Saying"
+
+#. module: theme_impacto
+#. openerp-web
+#: code:addons/theme_impacto/static/src/xml/update_skill.xml:30
+#, python-format
+msgid "You can see updated data after Save Page"
+msgstr "You can see updated data after Save Page"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.testimonial01
+msgid "Your customer support is the best I have experienced with any theme I have purchased. You have a theme that far exceeds all others. Thanks for providing such a fantastic theme, all your efforts are greatly appreciated on our end."
+msgstr "Your customer support is the best I have experienced with any theme I have purchased. You have a theme that far exceeds all others. Thanks for providing such a fantastic theme, all your efforts are greatly appreciated on our end."
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.pricing01
+msgid "incididunt ut labore <i class=\"fa fa-check\"/>"
+msgstr "incididunt ut labore <i class=\"fa fa-check\"/>"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card02
+msgid "proscuitto"
+msgstr "proscuitto"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.card02
+msgid "spaghetti"
+msgstr "spaghetti"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer4
+msgid "© 2017  All rights reserved"
+msgstr "© 2017  All rights reserved"
+
+#. module: theme_impacto
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer2
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer3
+#: model:ir.ui.view,arch_db:theme_impacto.custom_footer5
+msgid "© Copyright 2018 All Rights Reserved."
+msgstr "© Copyright 2018 All Rights Reserved."
+
