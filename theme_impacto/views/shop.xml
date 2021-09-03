@@ -7,7 +7,7 @@
      
             <template id="custom_website_sale_products" inherit_id="website_sale.products" name="Products">
                <!-- add product link in main webshop page -->
-                <xpath expr="//div[@class='products_pager']" position="before">
+                <xpath expr="//div[hasclass('products_pager')]" position="before">
                     <div class="row">
                   <div class="col-xs-12 product-line">
                           <div class="product-link">
@@ -39,7 +39,7 @@
               </div>
                 </xpath>
                 
-                <xpath expr="//div[@id='products_grid']//table" position="before">              
+                <!--<xpath expr="//div[@id='products_grid']//table" position="before">              
                       <div class="clearfix"></div>
                         <div class="as-product-list">
                             <div class="row no-gutter">
@@ -118,7 +118,8 @@
                                 </t></t>
                                 </div> 
                            </div>           
-                </xpath>
+                </xpath>-->
+
                 <xpath expr="//div[@id='products_grid']//table" position="replace">
                 <table></table>
                 </xpath>

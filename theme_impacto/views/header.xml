@@ -73,7 +73,7 @@
                              </div>
 <!-- Language flag to header -->
                               <div class="language" style="margin-right: 20px">
-                                 <div t-if="(request.website_multilang and len(website.language_ids) &gt; 1)" class="dropdown language_dropdown">
+                                 <!--<div t-if="(request.website_multilang and len(website.language_ids) &gt; 1)" class="dropdown language_dropdown">
                                 <a href="#" class="dropdown-toggle language_flag" data-toggle="dropdown" >
                                 <t t-foreach="website.language_ids" t-as="lg">
                                     <t t-if="request.context.get('lang') == lg.code">
@@ -95,7 +95,7 @@
                                     </t>
                                 </t>
                             </ul>
-                            </div>
+                            </div>-->
                             </div>
                         </div>
                     </div>
