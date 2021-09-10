@@ -7,14 +7,15 @@
     'category': 'Theme/Ecommerce',
     'author': 'Adventumweb',
     'sequence': 1,
-    'version': '1.27',
+    'version': '1.40',
     'depends': [
         'website',
         'website_crm',
         'web',
         'theme_common',
         'auth_signup',
-        'website_sale'],
+        'website_sale'
+        ,'website_language_flags'],
     'data': [   
         'views/customize_modal.xml',
          'views/assets.xml',
