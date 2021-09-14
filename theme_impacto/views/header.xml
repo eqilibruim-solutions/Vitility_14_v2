@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<data name="Custom Header" customize_show="True" inherit_id="website.layout">
+    <data>
+        <template id="custom_header_1" name="Custom Header" customize_show="True" inherit_id="website.layout">
             <xpath expr="//header" position="replace">
                 <header id="menu_odoo" style="display:none;">
                     <div class="navbar navbar-default navbar-static-top">
@@ -185,5 +186,6 @@
                     </div>
                 </header>
             </xpath>
-        </data>
+        </template>
+    </data>
     
