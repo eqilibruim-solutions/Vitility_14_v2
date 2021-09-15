@@ -9,10 +9,11 @@
     "support": "ipredictitsolutions@gmail.com",
 
     'category': 'Website',
-    'version': '14.0.0.1.0',
+    'version': '10.0.0.1.0',
     'depends': ['website'],
 
     'data': [
+        'views/res_lang_view.xml',
         'views/website_templates.xml',
     ],
 
@@ -23,5 +24,4 @@
     'installable': True,
 
     'images': ['static/description/banner.png'],
-    'pre_init_hook': 'pre_init_check',
 }
