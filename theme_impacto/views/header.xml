@@ -110,7 +110,7 @@
                                 <t t-foreach="website.language_ids" t-as="lg">
                                     <t t-if="lang!=lg.code">
                                         <li style="min-width: 50px;" class="mb8">
-                                            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg.code)" t-att-data-default-lang="(editable or translatable) and 'true' if website and lg.code == website.default_lang_code else None" class="js_change_lang" t-att-data-lang="lg.code" t-att-data-lang_dir="lg.direction">
+                                            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang_code=lg.code)" t-att-data-default-lang="(editable or translatable) and 'true' if website and lg.code == website.default_lang_id.code else None" class="js_change_lang" t-att-data-lang="lg.code" t-att-data-lang_dir="lg.direction">
                                 <img t-if="lg.lang_flag" t-att-src="website.image_url(lg, 'lang_flag')" height="20" width="30"/>
                                 <img t-if="not lg.lang_flag" t-attf-src="/website_language_flags/static/src/img/lang_flags/#{lg.code.split('_').pop().lower()}.png" height="20" width="30"/> 
                                             </a>
