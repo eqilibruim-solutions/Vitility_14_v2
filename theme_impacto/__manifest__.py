@@ -7,7 +7,7 @@
     'category': 'Theme/Ecommerce',
     'author': 'Adventumweb',
     'sequence': 1,
-    'version': '1.40',
+    'version': '1.40.1',
     'depends': [
         'website',
         'website_crm',

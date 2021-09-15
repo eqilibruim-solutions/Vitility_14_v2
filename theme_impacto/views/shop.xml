@@ -125,29 +125,29 @@
                 </xpath>
         </template>
         
-        <template id="website_sale.products_categories" inherit_id="website_sale.products" active="False"
-                  customize_show="True" name="Product Categories" priority="1">
-            <xpath expr="//div[@id='products_grid_before']" position="inside">
-                <ul id="category-widget">
-                    <h2 class="title-products_grid" style="margin: 0px 0 20px 0;">Categories</h2>
+<!--        <template id="website_sale.products_categories" inherit_id="website_sale.products" active="False"-->
+<!--                  customize_show="True" name="Product Categories" priority="1">-->
+<!--            <xpath expr="//div[@id='products_grid_before']" position="inside">-->
+<!--                <ul id="category-widget">-->
+<!--                    <h2 class="title-products_grid" style="margin: 0px 0 20px 0;">Categories</h2>-->
 
-                    <li t-att-class=" '' if category else 'active' ">
-                        <a t-att-href="keep('/shop',category=0)">All Products</a>
-                    </li>
-                    <t t-foreach="categories" t-as="c">
-                        <t t-call="website_sale.categories_recursive"/>
-                    </t>
-                </ul>
-            </xpath>
+<!--                    <li t-att-class=" '' if category else 'active' ">-->
+<!--                        <a t-att-href="keep('/shop',category=0)">All Products</a>-->
+<!--                    </li>-->
+<!--                    <t t-foreach="categories" t-as="c">-->
+<!--                        <t t-call="website_sale.categories_recursive"/>-->
+<!--                    </t>-->
+<!--                </ul>-->
+<!--            </xpath>-->
 
 
-            <xpath expr="//div[@id='products_grid_before']" position="attributes">
-                <attribute name="class">col-md-3</attribute>
-            </xpath>
-           <xpath expr="//div[@id='products_grid']" position="attributes">
-                <attribute name="class">col-md-9</attribute>
-            </xpath>    
-        </template>
+<!--            <xpath expr="//div[@id='products_grid_before']" position="attributes">-->
+<!--                <attribute name="class">col-md-3</attribute>-->
+<!--            </xpath>-->
+<!--           <xpath expr="//div[@id='products_grid']" position="attributes">-->
+<!--                <attribute name="class">col-md-9</attribute>-->
+<!--            </xpath>    -->
+<!--        </template>-->
         
         <template id="website_sale.products_attributes" inherit_id="website_sale.products" active="False" priority="2"
                   customize_show="True" name="Product Attribute's Filters">
