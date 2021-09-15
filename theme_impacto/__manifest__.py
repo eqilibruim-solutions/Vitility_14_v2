@@ -7,7 +7,7 @@
     'category': 'Theme/Ecommerce',
     'author': 'Adventumweb',
     'sequence': 1,
-    'version': '1.27',
+    'version': '1.29',
     'depends': [
         'website',
         'website_crm',
@@ -18,7 +18,7 @@
     'data': [   
         'views/customize_modal.xml',
          'views/assets.xml',
-		  'views/shop.xml',
+#		  'views/shop.xml',
          'views/page_login.xml',
 		'views/snippets.xml',
         'views/snippets_option.xml',
