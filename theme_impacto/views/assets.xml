@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
     	<template id="assets_theme" inherit_id="website.assets_frontend">
     		<xpath expr="." position="inside">
 
@@ -14,16 +13,16 @@
                 <link href="/theme_impacto/static/src/less/as_variables.less" rel="stylesheet" type="text/less"/>
                 <link href="/theme_impacto/static/src/less/header.less" rel="stylesheet" type="text/less"/>      
                 <link href="/theme_impacto/static/src/less/footer.less" rel="stylesheet" type="text/less"/>
-                <link href="/theme_impacto/static/src/less/as_base.less" rel="stylesheet" type="text/less"/>      
-                <link href="/theme_impacto/static/src/less/as_shortcodes.less" rel="stylesheet" type="text/less"/>     
-                <link href="/theme_impacto/static/src/less/as_blog_product.less" rel="stylesheet" type="text/less"/>                  
+                <link href="/theme_impacto/static/src/less/as_base.less" rel="stylesheet" type="text/less"/>  
+                <link href="/theme_impacto/static/src/less/as_shortcodes.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_impacto/static/src/less/as_blog_product.less" rel="stylesheet" type="text/less"/>               
                 <link href="/theme_impacto/static/src/less/customize_modal.less" rel="stylesheet" type="text/less"/>                  
                 <link href="/theme_impacto/static/src/plugins/magnific-popup/magnific-popup.css" rel="stylesheet"/>
                 <link href="/theme_impacto/static/src/plugins/slick/slick.less"   rel="stylesheet"/>
                 <link href="/theme_impacto/static/src/plugins/slick/slick-theme.less"  rel="stylesheet"/>                            
                 <link href="/theme_impacto/static/src/plugins/owl-carousel/owl.carousel.css" rel="stylesheet"/>
                 <link href="/theme_impacto/static/src/plugins/owl-carousel/owl.theme.css" rel="stylesheet"/>
-                <link href="/theme_impacto/static/src/less/responsive.less" rel="stylesheet" type="text/less"/> 
+                <link href="/theme_impacto/static/src/less/responsive.less" rel="stylesheet" type="text/less"/>
                 
 
 
@@ -48,5 +47,4 @@
 
             </xpath>
     	</template>
-</data>
-</openerp>
+</odoo>

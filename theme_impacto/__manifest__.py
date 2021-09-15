@@ -7,17 +7,15 @@
     'category': 'Theme/Ecommerce',
     'author': 'Adventumweb',
     'sequence': 1,
-    'version': '1.1',
+    'version': '1.40.1',
     'depends': [
         'website',
         'website_crm',
         'web',
         'theme_common',
         'auth_signup',
-        'website_sale',
-        # 'website_switch_shop_description',
-        'website_language_flags',
-        'web_search'],
+        'website_sale'
+        ,'website_language_flags'],
     'data': [   
         'views/customize_modal.xml',
          'views/assets.xml',
@@ -26,8 +24,8 @@
 		'views/snippets.xml',
         'views/snippets_option.xml',
 		'views/header.xml',
-        'views/footer.xml',
-        'views/page_login_business.xml'
+#        'views/footer.xml',
+#        'views/page_login_business.xml'
     ],
     'images': [
       'static/description/impacto.jpg',

@@ -7,7 +7,7 @@
      
             <template id="custom_website_sale_products" inherit_id="website_sale.products" name="Products">
                <!-- add product link in main webshop page -->
-                <xpath expr="//div[@class='products_pager']" position="before">
+                <xpath expr="//div[hasclass('products_pager')]" position="before">
                     <div class="row">
                   <div class="col-xs-12 product-line">
                           <div class="product-link">
@@ -39,7 +39,7 @@
               </div>
                 </xpath>
                 
-                <xpath expr="//div[@id='products_grid']//table" position="before">              
+                <!--<xpath expr="//div[@id='products_grid']//table" position="before">              
                       <div class="clearfix"></div>
                         <div class="as-product-list">
                             <div class="row no-gutter">
@@ -118,35 +118,36 @@
                                 </t></t>
                                 </div> 
                            </div>           
-                </xpath>
+                </xpath>-->
+
                 <xpath expr="//div[@id='products_grid']//table" position="replace">
                 <table></table>
                 </xpath>
         </template>
         
-        <template id="website_sale.products_categories" inherit_id="website_sale.products" active="False"
-                  customize_show="True" name="Product Categories" priority="1">
-            <xpath expr="//div[@id='products_grid_before']" position="inside">
-                <ul id="category-widget">
-                    <h2 class="title-products_grid" style="margin: 0px 0 20px 0;">Categories</h2>
+<!--        <template id="website_sale.products_categories" inherit_id="website_sale.products" active="False"-->
+<!--                  customize_show="True" name="Product Categories" priority="1">-->
+<!--            <xpath expr="//div[@id='products_grid_before']" position="inside">-->
+<!--                <ul id="category-widget">-->
+<!--                    <h2 class="title-products_grid" style="margin: 0px 0 20px 0;">Categories</h2>-->
 
-                    <li t-att-class=" '' if category else 'active' ">
-                        <a t-att-href="keep('/shop',category=0)">All Products</a>
-                    </li>
-                    <t t-foreach="categories" t-as="c">
-                        <t t-call="website_sale.categories_recursive"/>
-                    </t>
-                </ul>
-            </xpath>
+<!--                    <li t-att-class=" '' if category else 'active' ">-->
+<!--                        <a t-att-href="keep('/shop',category=0)">All Products</a>-->
+<!--                    </li>-->
+<!--                    <t t-foreach="categories" t-as="c">-->
+<!--                        <t t-call="website_sale.categories_recursive"/>-->
+<!--                    </t>-->
+<!--                </ul>-->
+<!--            </xpath>-->
 
 
-            <xpath expr="//div[@id='products_grid_before']" position="attributes">
-                <attribute name="class">col-md-3</attribute>
-            </xpath>
-           <xpath expr="//div[@id='products_grid']" position="attributes">
-                <attribute name="class">col-md-9</attribute>
-            </xpath>    
-        </template>
+<!--            <xpath expr="//div[@id='products_grid_before']" position="attributes">-->
+<!--                <attribute name="class">col-md-3</attribute>-->
+<!--            </xpath>-->
+<!--           <xpath expr="//div[@id='products_grid']" position="attributes">-->
+<!--                <attribute name="class">col-md-9</attribute>-->
+<!--            </xpath>    -->
+<!--        </template>-->
         
         <template id="website_sale.products_attributes" inherit_id="website_sale.products" active="False" priority="2"
                   customize_show="True" name="Product Attribute's Filters">

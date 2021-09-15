@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <template id="Custom_footer1" inherit_id="website.footer_default" name="mini Footers">
+        <template id="Custom_footer1" inherit_id="website.layout" name="mini Footers">
             <xpath expr="//div[@id='footer']" position="replace">
                 <div id="footer" style="display:none;" class="container hidden-print">
                     <div class="row">
@@ -77,7 +77,7 @@
             </xpath>
         </template>
 
-        <template id="custom_footer2" inherit_id="website.footer_default" customize_show="True" name=" Footer 1">
+        <template id="custom_footer2" inherit_id="website.layout" customize_show="True" name=" Footer 1">
              <xpath expr="//div[@id='footer']" position="after">
               <footer class="site-footer">
                         <div class="footer-top">
@@ -141,7 +141,7 @@
             </xpath>
         </template>
 
-        <template id="custom_footer3" inherit_id="website.footer_default"  name=" Footer 2" active="False" customize_show="True">
+        <template id="custom_footer3" inherit_id="website.layout"  name=" Footer 2" active="False" customize_show="True">
             <xpath expr="//div[@id='footer']" position="after">
                 <footer class="site-footer footer3">
                     <div class="footer-top">
@@ -220,7 +220,7 @@
             </xpath>
         </template>
 
-        <template id="custom_footer4" inherit_id="website.footer_default"  name=" Footer 3" active="False" customize_show="True">
+        <template id="custom_footer4" inherit_id="website.layout"  name=" Footer 3" active="False" customize_show="True">
             <xpath expr="//div[@id='footer']" position="after">
                 <footer class="site-footer footer2">
                         <div class="footer-top">
@@ -271,7 +271,7 @@
             </xpath>
         </template>
 
-        <template id="custom_footer5" inherit_id="website.footer_default"  name=" Footer 4" active="False" customize_show="True">
+        <template id="custom_footer5" inherit_id="website.layout"  name=" Footer 4" active="False" customize_show="True">
             <xpath expr="//div[@id='footer']" position="after" >
                 <footer class="site-footer footer4">
                     <div class="footer-top">
@@ -335,9 +335,5 @@
             </xpath>
         </template>
 
-       <template id="custom_layout_footer_copyright" inherit_id="website.layout_footer_copyright" >
-           <xpath expr="//div[@class='container mt16 mb8']" position="replace">
-           </xpath>
-       </template>
     </data>
 </openerp>

@@ -1,7 +1,7 @@
 import werkzeug
 from odoo import http
 from odoo.http import request
-from odoo.addons.website.models.website import slug
+from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.website.controllers.main import QueryURL
 
 PPG = 21  # Products Per Page
@@ -57,21 +57,19 @@ class TableCompute(object):
                     self.table[(pos / PPR) + y2][(pos % PPR) + x2] = False
             self.table[pos / PPR][pos % PPR] = {
                 'product': p, 'x': x, 'y': y,
-                'class': " ".join(map(lambda x: x.html_class or '', p.website_style_ids))
+                'ribbon': p.website_ribbon_id,
             }
             if index <= ppg:
                 maxy = max(maxy, y + (pos / PPR))
             index += 1
 
         # Format table according to HTML needs
-        rows = self.table.items()
-        rows.sort()
-        rows = map(lambda x: x[1], rows)
+        rows = sorted(self.table.items())
+        rows = [r[1] for r in rows]
         for col in range(len(rows)):
-            cols = rows[col].items()
-            cols.sort()
+            cols = sorted(rows[col].items())
             x += len(cols)
-            rows[col] = [c for c in map(lambda x: x[1], cols) if c]
+            rows[col] = [r[1] for r in cols if r[1]]
 
         return rows
 

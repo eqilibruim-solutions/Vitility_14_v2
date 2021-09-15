@@ -6,7 +6,7 @@
   </xpath>
 </template>
 
-<template id="customize_modal" inherit_id="website.theme_customize" name="theme_impacto modal">
+<template id="customize_modal" name="theme_impacto modal">
   <xpath expr="div" position="replace">
     <div id="theme_customize_modal" class="modal fade">
       <div class="modal-dialog">
