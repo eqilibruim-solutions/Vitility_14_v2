@@ -38,91 +38,6 @@
                   </div>
               </div>
                 </xpath>
-                
-                <!--<xpath expr="//div[@id='products_grid']//table" position="before">              
-                      <div class="clearfix"></div>
-                        <div class="as-product-list">
-                            <div class="row no-gutter">
-                               <t t-if="products">
-                               <t  t-foreach="products" t-as="product">
-                                <div class="col-md-4 col-sm-6">
-                                 <form action="/shop/cart/update" method="post">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <div itemscope="itemscope" itemtype="http://schema.org/Product">  
-
-                                    <div class="product-item">
-                                        <div class="product-wrap">
-                                            <div class="product-img">
-                                                <span itemprop="image" t-field="product.image" t-options='{"widget": "image"}'
-                                                      t-att-alt="product.name"/>
-                                              
-                                                   <div class="buttons-wrap clearfix">
-                                                    <a class="btn btn-xs pull-left" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" >
-                                                            <i class="fa fa-eye"></i> View
-                                                     </a>
-                                                    <input name="product_id" t-att-value="product.product_variant_id.id"
-                                                           type="hidden"/>
-                                                    <t t-if="len(product.product_variant_ids) == 1">
-                                                        <a class="add_to_cart a-submit btn btn-xs pull-right">
-                                                            <i class="fa fa-shopping-cart"></i>
-                                                             Cart
-                                                        </a>
-                                                    </t>
-                                                    <t t-if="len(product.product_variant_ids) &gt; 1">
-                                                        <a class="add_to_cart btn btn-xs pull-right"
-                                                           t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">
-                                                            <i class="fa fa-shopping-cart"></i>
-                                                           Cart
-                                                        </a>
-                                                    </t> 
-                                                </div>
-                                            </div>
-                                            <div class="product-body text-center">
-                                                <h5 class="title mb-0">
-                                                    <a itemprop="name"
-                                                       t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))"
-                                                       t-field="product.name"/>
-                                                </h5>
-                                                <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
-                                                      class="product_price" t-if="product.product_variant_ids">                                     
-                                                        <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
-                                                            <del class="text-danger mr8" style="white-space: nowrap;"
-                                                                 t-esc="compute_currency(product.website_public_price)"
-                                                                 t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
-                                                        </t>
-                                                        <span t-esc="product.website_price"
-                                                              t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                                                        <span itemprop="price" style="display:none;" t-esc="product.website_price"/>
-                                                        <span itemprop="priceCurrency" style="display:none;"
-                                                              t-esc="website.currency_id.name"/>
-                                                        
-                                                    
-                                                </div>
-                                                
-                                              
-                                            </div>
-                                        </div>
-                                                </div>
-                                    <t t-if="show_publish">
-                                        <div id="website_published_button" class="" groups="sales_team.group_sale_manager">
-                                            <t t-call="website.publish_management">
-                                                <t t-set="object" t-value="product"/>
-                                                <t t-set="publish_edit" t-value="True"/>
-                                                <t t-set="action" t-value="'product.product_template_action'"/>
-                                            </t>
-                                        </div>
-                                    </t>
-                             </div>
-                                    </form>
-                                </div>
-                                </t></t>
-                                </div> 
-                           </div>           
-                </xpath>-->
-
-                <xpath expr="//div[@id='products_grid']//table" position="replace">
-                <table></table>
-                </xpath>
         </template>
         
 <!--        <template id="website_sale.products_categories" inherit_id="website_sale.products" active="False"-->
@@ -209,7 +124,7 @@
                  <p class="internal_reference"><span style="color:#000000" t-field="product.default_code"/></p>
             </xpath>
                          
-          <xpath expr="//section//div[@class='row']//div[@class='col-sm-4']" position="replace">
+          <xpath expr="//section//div[@class='row']" position="replace">
               <div class="row">
                   <div class="col-xs-12 product-line" style="padding-top:0px;padding-bottom:3px;padding-left:15px;">
                           <div class="product-link">
@@ -256,16 +171,16 @@
              </div>
             </xpath>
 
-            <xpath expr="//section//div[@class='row']//div[@class='col-sm-2 text-right']" position="attributes">
-                <attribute name="class">col-sm-12 text-right</attribute>
-            </xpath>
+<!--            <xpath expr="//section//div[@class='row']//div[@class='col-sm-2 text-right']" position="attributes">-->
+<!--                <attribute name="class">col-sm-12 text-right</attribute>-->
+<!--            </xpath>-->
              
-            <xpath expr="//section//div[@class='row']//div[@class='col-sm-3 mb8']" position="replace">
-            </xpath>
+<!--            <xpath expr="//section//div[@class='row']//div[@class='col-sm-3 mb8']" position="replace">-->
+<!--            </xpath>-->
             
-            <xpath expr="//div[@id='website_published_button']" position="attributes">
-                <attribute name="class">col-md-12</attribute>
-            </xpath>
+<!--            <xpath expr="//div[@id='website_published_button']" position="attributes">-->
+<!--                <attribute name="class">col-md-12</attribute>-->
+<!--            </xpath>-->
             
              
 <!-- 
@@ -273,15 +188,15 @@
                 <attribute name="class">btn btn-default btn-md js_check_product a-submit</attribute>
             </xpath> -->
 
-           <xpath expr="//div[@class='col-sm-7']" position="attributes">
-                <attribute name="class">col-sm-6</attribute>
-            </xpath>
+<!--           <xpath expr="//div[@class='col-sm-7']" position="attributes">-->
+<!--                <attribute name="class">col-sm-6</attribute>-->
+<!--            </xpath>-->
              
 
 
-            <xpath expr="//div[@class='col-sm-5 col-lg-4 col-lg-offset-1']" position="attributes">
-                <attribute name="class">col-sm-6</attribute>
-            </xpath>
+<!--            <xpath expr="//div[@class='col-sm-5 col-lg-4 col-lg-offset-1']" position="attributes">-->
+<!--                <attribute name="class">col-sm-6</attribute>-->
+<!--            </xpath>-->
 
 
 
@@ -332,7 +247,7 @@
                          <div class="product-item">
                                         <div class="product-wrap">
                                             <div class="product-img">
-                                                <span itemprop="image" t-field="product.image" t-options='{"widget": "image"}'
+                                                <span itemprop="image" t-field="product.image_1920" t-options='{"widget": "image_1920"}'
                                                       t-att-alt="product.name"/>
                                             </div>
                                             <div class="product-body text-center">
@@ -413,57 +328,7 @@
             </xpath>
 
         </template>
-        
-        <template id="products_list_view" inherit_id="theme_impacto.custom_website_sale_products" active="False" customize_show="True" name="List View">
 
-            <xpath expr="//div[@id='products_grid']//div[hasclass('as-product-list')]" position="replace">
-                <t t-foreach="products" t-as="product">
-                    <div class="oe_product oe_list oe_product_cart" t-att-data-publish="product.website_published and 'on' or 'off'">
-                        <t t-set="show_publish" t-value="True"/>
-                         <form action="/shop/cart/update" method="post">
-            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
-            <div itemscope="itemscope" itemtype="http://schema.org/Product">
-                <div class="ribbon-wrapper">
-                    <div class="ribbon btn btn-danger">Sale</div>
-                </div>
-                <div class="oe_product_image">
-                    <a itemprop="url" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">
-                        <span itemprop="image" t-attf-content="{{request.httprequest.url_root}}web/image/product.template/{{product.id}}/image" t-field="product.image" t-options="{'widget': 'image', 'resize': None if product_image_big else '300x300', 'zoom': 'image'}" t-att-alt="product.name" />
-                    </a>
-                </div>
-                <t t-if="show_publish">
-                    <div id="website_published_button" class="" groups="sales_team.group_sale_manager">
-                        <t t-call="website.publish_management">
-                            <t t-set="object" t-value="product" />
-                            <t t-set="publish_edit" t-value="True" />
-                            <t t-set="action" t-value="'product.product_template_action'" />
-                        </t>
-                    </div>
-                </t>
-                <section>
-                    <h5>
-                        <strong>
-                            <a itemprop="name" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" t-att-content="product.name" t-field="product.name" />
-                        </strong>
-                    </h5>
-                    <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" >
-                        <b t-if="product.product_variant_ids">
-                            <t t-if="product.website_price_difference and website.get_current_pricelist().discount_policy=='without_discount'">
-                                <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
-                            </t>
-
-                            <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                            <span itemprop="price" style="display:none;" t-esc="product.website_price" />
-                            <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
-                        </b>
-                    </div>
-                </section>
-            </div>
-        </form>
-                    </div>
-                </t>
-            </xpath>
-    </template>  
     
 
     <template id="website_sale.products_description" inherit_id="website_sale.products_item" active="False" customize_show="False" name="Product Description">
