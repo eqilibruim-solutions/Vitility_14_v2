@@ -24,8 +24,7 @@
 		'views/snippets.xml',
         'views/snippets_option.xml',
 		'views/header.xml',
-#        'views/footer.xml',
-#        'views/page_login_business.xml'
+       'views/footer.xml'
     ],
     'images': [
       'static/description/impacto.jpg',
