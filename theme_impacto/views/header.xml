@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
     <data>
         <template id="custom_header_1" name="Custom Header" customize_show="True" inherit_id="website.layout">
             <xpath expr="//header" position="replace">
@@ -40,7 +41,7 @@
                     </div>
                 </header>
                <!-- Start Navigation -->
-                <header class="header fixed clearfix">                    
+                <header class="header fixed clearfix">
                    <div class="header-container container">
                       <div class="header-top-panel">
                         <div class="row">
@@ -58,7 +59,7 @@
                                     <i class="fa fa-envelope"/>
                                     info@vitility.com
                                     </a>
-                                </li>                                
+                                </li>
                                 </ul>
                             </div>
                             <div class="login-header">
@@ -87,7 +88,7 @@
                                         <li style="min-width: 50px;" class="mb8">
                                             <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg.code)" t-att-data-default-lang="(editable or translatable) and 'true' if website and lg.code == website.default_lang_code else None" class="js_change_lang" t-att-data-lang="lg.code" t-att-data-lang_dir="lg.direction">
                                 <img t-if="lg.lang_flag" t-att-src="website.image_url(lg, 'lang_flag')" height="20" width="30"/>
-                                <img t-if="not lg.lang_flag" t-attf-src="/website_language_flags/static/src/img/lang_flags/#{lg.code.split('_').pop().lower()}.png" height="20" width="30"/> 
+                                <img t-if="not lg.lang_flag" t-attf-src="/website_language_flags/static/src/img/lang_flags/#{lg.code.split('_').pop().lower()}.png" height="20" width="30"/>
                                             </a>
                                         </li>
                                     </t>
@@ -112,7 +113,7 @@
                                         <li style="min-width: 50px;" class="mb8">
                                             <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang_code=lg.code)" t-att-data-default-lang="(editable or translatable) and 'true' if website and lg.code == website.default_lang_id.code else None" class="js_change_lang" t-att-data-lang="lg.code" t-att-data-lang_dir="lg.direction">
                                 <img t-if="lg.lang_flag" t-att-src="website.image_url(lg, 'lang_flag')" height="20" width="30"/>
-                                <img t-if="not lg.lang_flag" t-attf-src="/website_language_flags/static/src/img/lang_flags/#{lg.code.split('_').pop().lower()}.png" height="20" width="30"/> 
+                                <img t-if="not lg.lang_flag" t-attf-src="/website_language_flags/static/src/img/lang_flags/#{lg.code.split('_').pop().lower()}.png" height="20" width="30"/>
                                             </a>
                                         </li>
                                     </t>
@@ -132,10 +133,10 @@
                                         <span itemprop="image" t-field="res_company.logo" t-field-options="{&quot;widget&quot;: &quot;image&quot;,&quot;class&quot;:&quot;logo_img&quot;}"/>
                                     </a>-->
                            </div>
-                            
+
                            <div class="header-buttons header-phone-left">
                                  <div class="header-top-dropdown">
-                                    <a href="#search-but"><i class="fa fa-search"/></a>  
+                                    <a href="#search-but"><i class="fa fa-search"/></a>
                                     <div class="hm-search-box" id="search-box">
                                       <form action="/shop" method="get">
                                         <input type="text" name="search" placeholder="Search" class="search-input" t-att-value="search"/>
@@ -181,11 +182,12 @@
                                             </div>
                                         </nav>
                           </div>
-                        </div> 
-                     </div> 
+                        </div>
+                     </div>
                     </div>
                 </header>
             </xpath>
         </template>
     </data>
+</odoo>
     
