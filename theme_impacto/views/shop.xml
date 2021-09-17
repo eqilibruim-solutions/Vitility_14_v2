@@ -320,12 +320,12 @@
                     </div>
                   </div>
             </xpath>
-            <xpath expr="//div[@id='wrap']//div/h1[@class='mb32']" position="replace">
-            </xpath>
+<!--            <xpath expr="//div[@id='wrap']//div/h1[@class='mb32']" position="replace">-->
+<!--            </xpath>-->
 
-            <xpath expr="//div[@id='wrap']//div[@class='container oe_website_sale']//t[1]" position="before">
-                <h1 class="page-title margin-top-clear hidden">Cart</h1>
-            </xpath>
+<!--            <xpath expr="//div[@id='wrap']//div[@class='container oe_website_sale']//t[1]" position="before">-->
+<!--                <h1 class="page-title margin-top-clear hidden">Cart</h1>-->
+<!--            </xpath>-->
 
         </template>
 
