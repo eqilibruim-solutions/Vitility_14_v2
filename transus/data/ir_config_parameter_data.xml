@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="transus_wsdl_parameter" model="ir.config_parameter">
+            <field name="key">transus.wsdl</field>
+            <field name="value">https://webconnect.transus.com/Exchange.asmx?WSDL</field>
+        </record>
+    </data>
+</odoo>
