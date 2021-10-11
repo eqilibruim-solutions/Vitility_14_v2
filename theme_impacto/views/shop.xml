@@ -284,50 +284,50 @@
 		
 		<!-- Add breadcrumb to product page-->
 		
-<!--        <template id="custom_cart" inherit_id="website_sale.cart">-->
-<!--          <xpath expr="//div[@id='wrap']//div" position="before">-->
-<!--              <div class="inner-intro small-intro dark-bg ">-->
-<!--                    <div class="container">-->
-<!--                      <div class="row intro-title">-->
-<!--                        <div class="col-sm-12">-->
-<!--                          <div class="row">-->
-<!--                            <div class="col-sm-8 text-center col-sm-offset-2">   -->
-<!--                              <ul class="page-breadcrumb">-->
-<!--                                <span itemscope="" itemtype="http://schema.org/BreadcrumbList">-->
-<!--                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">-->
-<!--                        <a t-att-href="keep(category=0)" itemprop="url"><span itemprop="name">Products</span></a>-->
-<!--                        <meta itemprop="position" content="1" t-set="p" t-value="1" />-->
-<!--                    </span>-->
-<!--                    <t t-if="category">-->
-<!--                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"> / -->
-<!--                        <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)" itemprop="url">-->
-<!--                            <span itemprop="name" t-field="category.name" />-->
-<!--                        </a>-->
-<!--                        <meta itemprop="position" t-attf-content="{{ p + 1 }}" t-set="p" t-value="p+1" />-->
-<!--                    </span>-->
-<!--                    </t>-->
-<!--                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"> / -->
-<!--                        <span class="active" itemprop="name" t-field="product.name" />-->
-<!--                        <meta itemprop="position" t-attf-content="{{ p + 1 }}" />-->
-<!--                    </span>-->
-<!--                </span>-->
-<!--                              </ul>-->
-<!--                              <h1 class="title">Cart</h1>-->
-<!--                            </div>-->
-<!--                          </div>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
+        <template id="custom_cart" inherit_id="website_sale.cart">
+          <xpath expr="//div[@id='wrap']//div" position="before">
+              <div class="inner-intro small-intro dark-bg ">
+                    <div class="container">
+                      <div class="row intro-title">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-8 text-center col-sm-offset-2">
+                              <ul class="page-breadcrumb">
+                                <span itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a t-att-href="keep(category=0)" itemprop="url"><span itemprop="name">Products</span></a>
+                        <meta itemprop="position" content="1" t-set="p" t-value="1" />
+                    </span>
+                    <t t-if="category">
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"> /
+                        <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)" itemprop="url">
+                            <span itemprop="name" t-field="category.name" />
+                        </a>
+                        <meta itemprop="position" t-attf-content="{{ p + 1 }}" t-set="p" t-value="p+1" />
+                    </span>
+                    </t>
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"> /
+                        <span class="active" itemprop="name" t-field="product.name" />
+                        <meta itemprop="position" t-attf-content="{{ p + 1 }}" />
+                    </span>
+                </span>
+                              </ul>
+                              <h1 class="title">Cart</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </xpath>
+<!--            <xpath expr="//div[@id='wrap']//div/h1[@class='mb32']" position="replace">-->
 <!--            </xpath>-->
-<!--&lt;!&ndash;            <xpath expr="//div[@id='wrap']//div/h1[@class='mb32']" position="replace">&ndash;&gt;-->
-<!--&lt;!&ndash;            </xpath>&ndash;&gt;-->
 
-<!--&lt;!&ndash;            <xpath expr="//div[@id='wrap']//div[@class='container oe_website_sale']//t[1]" position="before">&ndash;&gt;-->
-<!--&lt;!&ndash;                <h1 class="page-title margin-top-clear hidden">Cart</h1>&ndash;&gt;-->
-<!--&lt;!&ndash;            </xpath>&ndash;&gt;-->
+<!--            <xpath expr="//div[@id='wrap']//div[@class='container oe_website_sale']//t[1]" position="before">-->
+<!--                <h1 class="page-title margin-top-clear hidden">Cart</h1>-->
+<!--            </xpath>-->
 
-<!--        </template>-->
+        </template>
 
     
 
