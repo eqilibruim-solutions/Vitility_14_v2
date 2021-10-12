@@ -20,6 +20,23 @@
                 </a>
             </div>
        </xpath>
+        <xpath expr="//h6[@class='o_wsale_products_item_title']" position="after">
+            <h6 class="o_wsale_products_item_title">
+                <b itemprop="default_code" t-att-content="product.default_code" t-field="product.default_code" />
+            </h6>
+        </xpath>
+       <xpath expr="//div[@class='product_price']" position="replace">
+            <div class="product_price" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                <del t-attf-class="text-danger mr-2 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                <span style="color:black;font-size:15px;">inclusief btw</span>
+            </div>
+        </xpath>
+<!--       <xpath expr="//span[@class='oe_currency_value']" position="after">-->
+<!--            <span style="color:black;font-size:15px;">inclusief btw</span>-->
+<!--        </xpath>-->
 <!--       <xpath expr="//div[@class='o_wsale_product_information_text']" position="before">-->
 <!--           <div>-->
 <!--                <input name="product_id"-->
