@@ -31,7 +31,7 @@
                 <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
                 <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
                 <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
-                <span style="color:black;font-size:15px;">inclusief btw</span>
+                <span t-if="combination_info['price']" style="color:black;font-size:15px;">inclusief btw</span>
             </div>
         </xpath>
 <!--       <xpath expr="//span[@class='oe_currency_value']" position="after">-->
