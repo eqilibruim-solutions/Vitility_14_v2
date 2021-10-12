@@ -7,7 +7,7 @@
     'category': 'Theme/Ecommerce',
     'author': 'Adventumweb',
     'sequence': 1,
-    'version': '1.1',
+    'version': '1.40.2',
     'depends': [
         'website',
         'website_crm',
@@ -15,27 +15,24 @@
         'theme_common',
         'auth_signup',
         'website_sale',
-        # 'website_switch_shop_description',
-        'website_language_flags',
-        'web_search'],
-    'data': [   
+        'website_language_flags'],
+    'data': [
         'views/customize_modal.xml',
-         'views/assets.xml',
-		  'views/shop.xml',
-         'views/page_login.xml',
-		'views/snippets.xml',
+        'views/assets.xml',
+        'views/shop.xml',
+        'views/page_login.xml',
+        'views/snippets.xml',
         'views/snippets_option.xml',
-		'views/header.xml',
+        'views/header.xml',
         'views/footer.xml',
         'views/page_login_business.xml'
     ],
     'images': [
-      'static/description/impacto.jpg',
+        'static/description/impacto.jpg',
     ],
     'price': '99',
-    'currency':'EUR',
-    'live_test_url':'http://198.251.72.29/',
-	'installable': True,
+    'currency': 'EUR',
+    'live_test_url': 'http://198.251.72.29/',
+    'installable': True,
     'application': True,
-	
 }

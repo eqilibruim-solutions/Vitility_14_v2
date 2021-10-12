@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
     <data>
 		<template id="custom_login_form" inherit_id="web.login" name="Page Login">
             <xpath expr="//form" position="replace">
@@ -70,6 +70,6 @@
                     </div>
                 </div>
             </xpath>
-               </template>
+        </template>
     </data>
-</openerp>
+</odoo>

@@ -1,99 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-   <template id="custom_website_sale_products777" inherit_id="theme_impacto.custom_website_sale_products">
-        <xpath expr="//div[@id='products_grid']//div[@class='as-product-list']" position="replace">
-                <div class="row no-gutter">
-                    <t t-if="products">
-                        <t t-foreach="products" t-as="product">
-                            <div class="col-md-4 col-sm-6 div_level">
-                                <form action="/shop/cart/update" method="post">
-                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                    <div itemscope="itemscope" itemtype="http://schema.org/Product">
-                                       <div class="shadow product-item">
-                                            <a t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">
-                                                <div class="product-wrap">
-                                                    <div class="product-img">
-
-                                                        <span itemprop="image" t-field="product.image"
-                                                              t-options='{"widget": "image","class":"xyz"}'
-                                                              t-att-alt="product.name"/>
-                                                    </div>
-                                                    <div class="product-body text-center">
-                                                        <h5 class="title mb-0 height_level">
-                                                            <a itemprop="name"
-                                                               t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))"
-                                                               t-field="product.name"/>
-                                                        </h5>
-
-                                                        <h6>
-                                                            <p><t t-esc="product.default_code"/></p>
-                                                        </h6>
-                                                        <div class="product" t-if="not product.default_code">
-                                                         </div>
-
-                                                        <div itemprop="offers" itemscope="itemscope"
-                                                             itemtype="http://schema.org/Offer"
-                                                             class="product_price" style="color:black;font-size:16px;"
-                                                             t-if="product.product_variant_ids">
-                                                            <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
-                                                                <del class="text-danger mr8"
-                                                                     style="white-space: nowrap;"
-                                                                     t-esc="compute_currency(product.website_public_price)"
-                                                                     t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/>
-                                                            </t>
-                                                            <span t-esc="product.website_price"
-                                                                  t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                                                            <span itemprop="price" style="display:none;"
-                                                                  t-esc="product.website_price"/>
-                                                            <span itemprop="priceCurrency" style="display:none;"
-                                                                  t-esc="website.currency_id.name"/>
-                                                            <span style="color:black;font-size:12px;">inclusief btw
-                                                            </span>
-
-                                                        </div>
-                                                         <div class="abc" t-if="not product.product_variant_ids">
-                                                         </div>
-
-                                                        <div>
-                                                            <input name="product_id"
-                                                                   t-att-value="product.product_variant_id.id"
-                                                                   type="hidden"/>
-                                                            <a class="add_to_cart a-submit btn btn-xs pull-right action tocart_cart primary">
-                                                                <div class="row">
-                                                                    <div class="col-md-2 col-xs-2">
-                                                                        <h3>
-                                                                            <i class="fa fa-shopping-cart" style="color:white;"></i>
-                                                                        </h3>
-                                                                    </div>
-                                                                    <div class="col-md-8 col-xs-8" style="padding-top:7px;">
-                                                                        In winkelwagen
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </a>
-                                       </div>
-                                        <t t-if="show_publish">
-                                            <div id="website_published_button" class=""
-                                                 groups="sales_team.group_sale_manager">
-                                                <t t-call="website.publish_management">
-                                                    <t t-set="object" t-value="product"/>
-                                                    <t t-set="publish_edit" t-value="True"/>
-                                                    <t t-set="action"
-                                                       t-value="'product.product_template_action'"/>
-                                                </t>
-                                            </div>
-                                        </t>
-                                    </div>
-                                </form>
-                            </div>
-                        </t>
-                    </t>
-                </div>
+   <template id="custom_website_sale_products777" inherit_id="website_sale.products_item">
+        <xpath expr="//div[@class='o_wsale_product_btn']" position="replace">
+            <div>
+                <input name="product_id"
+                       t-att-value="product.product_variant_id.id"
+                       type="hidden"/>
+                <a class="add_to_cart a-submit btn btn-xs pull-right action tocart_cart primary o_wsale_product_btn">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2">
+                            <h3>
+                                <i class="fa fa-shopping-cart" style="color:white;"></i>
+                            </h3>
+                        </div>
+                        <div class="col-md-8 col-xs-8" style="padding-top:7px;">
+                            In winkelwagen
+                        </div>
+                    </div>
+                </a>
+            </div>
+       </xpath>
+        <xpath expr="//h6[@class='o_wsale_products_item_title']" position="after">
+            <h6 class="o_wsale_products_item_title">
+                <b itemprop="default_code" t-att-content="product.default_code" t-field="product.default_code" />
+            </h6>
         </xpath>
+       <xpath expr="//div[@class='product_price']" position="replace">
+            <div class="product_price" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                <del t-attf-class="text-danger mr-2 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                <span t-if="combination_info['price']" style="color:black;font-size:15px;">inclusief btw</span>
+            </div>
+        </xpath>
+<!--       <xpath expr="//span[@class='oe_currency_value']" position="after">-->
+<!--            <span style="color:black;font-size:15px;">inclusief btw</span>-->
+<!--        </xpath>-->
+<!--       <xpath expr="//div[@class='o_wsale_product_information_text']" position="before">-->
+<!--           <div>-->
+<!--                <input name="product_id"-->
+<!--                       t-att-value="product.product_variant_id.id"-->
+<!--                       type="hidden"/>-->
+<!--                <a class="add_to_cart a-submit btn btn-xs pull-right action tocart_cart primary o_wsale_product_btn">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-2 col-xs-2">-->
+<!--                            <h3>-->
+<!--                                <i class="fa fa-shopping-cart" style="color:white;"></i>-->
+<!--                            </h3>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-8 col-xs-8" style="padding-top:7px;">-->
+<!--                            In winkelwagen-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--       </xpath>-->
     </template>
     <template id="custom_cart777" inherit_id="theme_impacto.custom_cart">
         <xpath expr="//div[@id='wrap']//div" position="replace">
