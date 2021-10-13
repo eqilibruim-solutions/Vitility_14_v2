@@ -29,8 +29,3 @@ class SaleOrderLine(models.Model):
         else:
             self.wh_qty_available = "0"
 
-class producttemplate(models.Model):
-    _inherit = 'product.template'
-
-    x_omdoos_aantal_producten = fields.Char()
-
