@@ -27,13 +27,14 @@ Add a field in sale order line to show quantity on hand in selected warehouse an
     'author': 'Busines Agility Masters',
     'website': 'https://www.businessagilitymasters.nl',
     'category': 'Sales',
-    'version': '10.0.0.1.1',
+    'version': '1.0.0',
     'depends': [
         'sale_stock',
         'stock',
+        'stock_available'
     ],
     'data': [
-        'views/sale_order_view.xml',
+        'views/sale_order_view.xml'
     ],
     'installable': True,
 }
