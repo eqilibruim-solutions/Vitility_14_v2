@@ -25,4 +25,12 @@ class SaleOrderLine(models.Model):
             product = self.env['product.product'].with_context(
                 warehouse=self.order_id.warehouse_id.id).browse(
                 self.product_id.id)
-            self.wh_qty_available = str(int(product.immediately_usable_qty)) 
+            self.wh_qty_available = str(int(product.immediately_usable_qty))
+        else:
+            self.wh_qty_available = "0"
+
+class producttemplate(models.Model):
+    _inherit = 'product.template'
+
+    x_omdoos_aantal_producten = fields.Char()
+
