@@ -19,7 +19,6 @@ class PurchaseOrderLine(models.Model):
             else:
                 rec.product_moq = "No Supplier set."
 
-    @api.multi
     def get_supplier_minimum_product_price(self):
         for rec in self:
             rec.is_click = True

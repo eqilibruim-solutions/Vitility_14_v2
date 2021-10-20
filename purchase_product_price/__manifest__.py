@@ -2,13 +2,13 @@
 {
     'name': "Purchase Order Product Price",
     'description': "Add Button to get price of minimum quantity from the Vendor",
-    'author': "Business Agility Masters",
-    'website': "http://www.BusinessAgilityMasters.com",
+    'author': "GRIPICT",
+    'website': "",
     'category': 'Purchase',
-    'version': '10.0.1.0.3',
+    'version': '14.0.1.0.0',
     'license': 'AGPL-3',
     'depends': [
-        'purchase',
+        'purchase'
     ],
     'data': [
         'views/purchase_order_line_views.xml'
