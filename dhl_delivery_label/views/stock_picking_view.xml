@@ -11,6 +11,7 @@
             </xpath>
             <xpath expr="//button[@name='button_scrap']" position='after'>
                 <button name="button_print_dhl_label" type="object" string="Print DHL Label" attrs="{'invisible': ['|',('state','!=','done'),('carrier_delivery_type', '!=', 'dhl')]}"/>
+                <button name="button_print_dhl_custom_declartion" type="object" string="Print DHL Custom Declaration" attrs="{'invisible': ['|',('state','!=','done')]}"/>
             </xpath>
         </field>
     </record>
