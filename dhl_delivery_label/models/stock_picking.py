@@ -8,11 +8,10 @@ from urllib.request import urlopen,Request
 import json
 import uuid
 import base64
-from urllib import request
-try:
-    import urllib.request as urllib2
-except ImportError:
-    import urllib2
+# try:
+#     import urllib.request as urllib2
+# except ImportError:
+#     import urllib2
 
 
 class StockPicking(models.Model):
@@ -223,7 +222,6 @@ class StockPicking(models.Model):
 
         return
 
-    @api.multi
     def button_print_dhl_custom_declartion(self):
         self.ensure_one()
         invoices = self.env['account.invoice'].search([('origin', 'ilike', self.origin)], limit=1, order="id desc")
