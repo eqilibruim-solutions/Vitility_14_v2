@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_hide_url_tree" model="ir.ui.view">
+        <field name="name">Hide Menus on URL Tree</field>
+        <field name="model">hide.menu.url</field>
+        <field name="arch" type="xml">
+            <tree string="URLs to hide menubar">
+                <field name="active"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action act window -->
+    <record model="ir.actions.act_window" id="hide_url_action">
+        <field name="name">Hide Menus on URL</field>
+        <field name="res_model">hide.menu.url</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu in website admin configurations -->
+    <menuitem id ="hide_url_config_menu" name="URLs to hide menus" parent="website.menu_website_global_configuration" action="hide_url_action"/>
+
+</odoo>
