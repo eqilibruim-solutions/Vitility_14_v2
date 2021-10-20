@@ -5,6 +5,7 @@ from odoo.exceptions import UserError
 
 class DhlCustomerInvoice(models.AbstractModel):
     _name = "report.dhl_customs_invoice.report_customer_invoice_dhl"
+    _description = "DHL Customer Invoice"
 
     def get_lines_data(self, inv, delivery):
         line_list = []

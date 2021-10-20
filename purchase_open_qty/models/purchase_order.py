@@ -4,14 +4,13 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models
-import odoo.addons.decimal_precision as dp
 
 
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
 
     @api.depends('product_qty', 'qty_invoiced',
-                 'invoice_lines.invoice_id.state',
+                 'invoice_lines.move_id.state',
                  'order_id.state', 'move_ids.state', 'qty_received')
     def _compute_qty_to_invoice(self):
         for line in self:
@@ -38,13 +37,11 @@ class PurchaseOrderLine(models.Model):
             line.qty_to_receive = total
 
     qty_to_invoice = fields.Float(compute='_compute_qty_to_invoice',
-                                  digits=dp.get_precision(
-                                      'Product Unit of Measure'),
+                                  digits='Product Unit of Measure',
                                   copy=False,
                                   string="Qty to Bill", store=True)
     qty_to_receive = fields.Float(compute='_compute_qty_to_receive',
-                                  digits=dp.get_precision(
-                                      'Product Unit of Measure'),
+                                  digits='Product Unit of Measure',
                                   copy=False,
                                   string="Qty to Receive", store=True)
 
@@ -72,13 +69,10 @@ class PurchaseOrder(models.Model):
 
     @api.model
     def _search_qty_to_receive(self, operator, value):
-        po_line_obj = self.env['purchase.order.line']
-        res = []
-        po_lines = po_line_obj.search(
+        po_lines = self.env['purchase.order.line'].search(
             [('qty_to_receive', operator, value)])
         order_ids = po_lines.mapped('order_id')
-        res.append(('id', 'in', order_ids.ids))
-        return res
+        return [('id', 'in', order_ids.ids)]
 
     qty_to_invoice = fields.Float(compute='_compute_qty_to_invoice',
                                   search='_search_qty_to_invoice',

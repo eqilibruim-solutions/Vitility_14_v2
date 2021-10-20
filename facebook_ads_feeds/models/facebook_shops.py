@@ -88,7 +88,7 @@ class FacebookMerchantShop(models.Model):
     limit = fields.Integer(string="Limit",default=10, help="Product Limit:- Selected limit product will generate inside feed xml.")
     product_ids_rel = fields.Many2many(comodel_name='product.template', relation='fb_shop_product_rel', column1='facebook_id', column2='product_id',domain=_get_default_domain , string="Products")
     public_categ_ids = fields.Many2many(comodel_name='product.public.category', relation='fb_shop_public_category_rel', column1='facebook_id', column2='prod_cat_id', string="Category")
-    mapping_count=fields.Integer(srting="Total Mappings",compute="_mapping_count")
+    mapping_count=fields.Integer(string="Total Mappings",compute="_mapping_count")
     crone_id=fields.Many2one(comodel_name='ir.cron',string="Cron Detail",readonly=True)
     multi_images = fields.Boolean(string="Want to sync Multi Images at facebook catalog")
     sync_product_variant = fields.Boolean(string="Want to sync product variants at facebook catalog")

@@ -60,6 +60,7 @@ class StockPickingModifier(models.Model):
 
 class DHLTrackerCode(models.Model):
     _name = "dhl.tracker.code"
+    _description = "DHL Tracker Code"
 
     picking_id = fields.Many2one("stock.picking", string="Picking")
     tracker_code = fields.Char("Tracker Code")
