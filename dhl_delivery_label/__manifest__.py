@@ -7,7 +7,7 @@
     'author': 'Onestein',
     'website': 'http://www.onestein.eu',
     'category': 'Warehouse',
-    'version': '14.0.1.0.0',
+    'version': '14.0.1.0.1',
     'license': 'AGPL-3',
     'depends': [
         'stock',
@@ -21,7 +21,7 @@
 
         'views/stock_picking_view.xml',
         'views/delivery_carrier_view.xml',
-        'views/res_company_view.xml',
-        'views/res_partner_view.xml'
+        # 'views/res_company_view.xml',
+        # 'views/res_partner_view.xml'
     ],
 }
