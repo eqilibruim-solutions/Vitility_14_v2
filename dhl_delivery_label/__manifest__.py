@@ -18,7 +18,10 @@
         'delivery_package_number'
     ],
     'data': [
+
         'views/stock_picking_view.xml',
         'views/delivery_carrier_view.xml',
+        'views/res_company_view.xml',
+        'views/res_partner_view.xml'
     ],
 }
