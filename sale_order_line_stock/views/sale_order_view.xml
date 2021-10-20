@@ -5,9 +5,9 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/widget[@name='qty_at_date_widget']" position="after">
-    <field name="wh_qty_available"/>
-  </xpath>
+                <xpath expr="//field[@name='order_line']/tree//field[@name='qty_invoiced']" position="after">
+                    <field name="wh_qty_available" string="Quantity on hand"/>
+                </xpath>
             </field>
         </record>
     </data>
