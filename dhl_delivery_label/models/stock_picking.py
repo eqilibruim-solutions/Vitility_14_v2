@@ -345,7 +345,7 @@ class StockPicking(models.Model):
                     "email": company.email,
                     "phoneNumber": company.phone,
                     "vatNumber": company.vat or '',
-                    "eoriNumber": company.eori_number or ''
+                    "eoriNumber": company.x_eori_number or ''
                 },
                 "receiver": {
                     "name": {
@@ -365,7 +365,7 @@ class StockPicking(models.Model):
                     "email": partner.email,
                     "phoneNumber": partner.phone,
                     "vatNumber": partner.vat or '',
-                    "eoriNumber": partner.eori_number or ''
+                    "eoriNumber": partner.x_eori_number or ''
                 },
                 "currency": company.currency_id.name,
                 "invoiceNumber": invoices.number or '',
@@ -396,7 +396,7 @@ class StockPicking(models.Model):
                     "email": partner.email,
                     "phoneNumber": partner.phone,
                     "vatNumber": partner.vat or '',
-                    "eoriNumber": partner.eori_number or ''
+                    "eoriNumber": partner.x_eori_number or ''
                 },
                 "defermentAccountDuties": "GB078457372000",
                 "defermentAccountVat": "385694146",
