@@ -2,7 +2,7 @@
 <odoo>
 
     <!-- Navbar -->
-    <template id="tus_hidden_navbar" inherit_id="theme_impacto.custom_navbar" name="Hidden Navbar">
+    <template id="tus_hidden_navbar" inherit_id="theme_impacto.custom_header_1" name="Hidden Navbar">
         <xpath expr="//nav" position="attributes">
             <attribute name="t-if">not any(word in request.httprequest.path for word in request.urls_to_hide_menubar)</attribute>
         </xpath>

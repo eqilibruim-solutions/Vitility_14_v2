@@ -17,7 +17,6 @@
     <record model="ir.actions.act_window" id="hide_url_action">
         <field name="name">Hide Menus on URL</field>
         <field name="res_model">hide.menu.url</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

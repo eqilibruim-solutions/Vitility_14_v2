@@ -2,7 +2,7 @@
 
 {
     'name': 'Website Hide Menubar on URL',
-    'version': '10.0.1.0.1',
+    'version': '14.0.1.0.0',
     'category': 'Website',
     'license': '',
     'summary': 'This modules allows to hide menubar on specific URL.',
@@ -22,7 +22,8 @@
     'website': 'www.techultrasolutions.com',
     'depends': ['theme_impacto'],
     'data': [
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        # 'views/templates.xml',
         'views/views.xml'
         ],
     'installable': True,
