@@ -5,14 +5,14 @@
     'author': 'Petit B.V.',
     'website': 'www.bepetit.nl',
     'category': 'Purchase',
-    'version': '10.0.1.0.3',
+    'version': '14.0.1.0.0',
     'license': 'AGPL-3',
     'depends': [
-        'purchase',
+        'purchase', 'purchase_stock'
     ],
     'data': [
         # 'security/ir.model.access.csv',
-        'views/report_purchase_order_modifier.xml',
+        # 'views/report_purchase_order_modifier.xml',
         'views/purchase_order_modifier.xml',
     ],
 }

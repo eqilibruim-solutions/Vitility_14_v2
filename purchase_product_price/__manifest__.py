@@ -7,9 +7,7 @@
     'category': 'Purchase',
     'version': '14.0.1.0.0',
     'license': 'AGPL-3',
-    'depends': [
-        'purchase'
-    ],
+    'depends': ['purchase', 'purchase_order_modifier'],
     'data': [
         'views/purchase_order_line_views.xml'
     ],
