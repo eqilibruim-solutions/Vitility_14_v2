@@ -17,7 +17,7 @@ class PurchaseOrderLine(models.Model):
                 seller = rec.product_id.with_company(rec.order_id.company_id)._select_seller(
                     partner_id=rec.order_id.partner_id,
                     quantity=rec.product_qty,
-                    date=rec.order_id.date_order and rec.order_id.date_order[:10],
+                    date=rec.order_id.date_order and rec.order_id.date_order.date(),
                     uom_id=rec.product_id.uom_po_id
                 )
                 rec.supplier_info = seller.vandor_product_information
@@ -29,10 +29,10 @@ class PurchaseOrderLine(models.Model):
         """ Getting additional information from """
         vendor_info_dict = {}
         for rec in self:
-            seller = rec.product_id._select_seller(
+            seller = rec.product_id.with_company(rec.order_id.company_id)._select_seller(
                 partner_id=rec.order_id.partner_id,
                 quantity=rec.product_qty,
-                date=rec.order_id.date_order and rec.order_id.date_order[:10],
+                date=rec.order_id.date_order and rec.order_id.date_order.date(),
                 uom_id=rec.product_id.uom_po_id
             )
             if seller:

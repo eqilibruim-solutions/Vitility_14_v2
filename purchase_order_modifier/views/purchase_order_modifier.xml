@@ -13,16 +13,19 @@
         </field>
     </record>
 
-    <!-- Vendor information modifier -->
+    <!--Vendor information modifier-->
     <record id="view_product_supplier_info_form_inherit" model="ir.ui.view">
         <field name="name">view.product.supplier.info.form.inherit</field>
         <field name="model">product.supplierinfo</field>
         <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//form/group" position="inside">
-                <group string="Vendor Information">
-                    <field name="vandor_product_information"/>
+            <xpath expr="//sheet/group" position="after">
+                <group>
+                    <group string="Vendor Information">
+                        <field name="vandor_product_information"/>
+                    </group>
                 </group>
+
             </xpath>
         </field>
     </record>

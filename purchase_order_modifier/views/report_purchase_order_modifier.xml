@@ -2,31 +2,32 @@
 <odoo>
     <!-- Purchase Order Modifier for including new fields in report for Vendor Instructions -->
     <template id="report_purchase_order_inherit" inherit_id="purchase.report_purchaseorder_document">
-        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[3]" position="replace">
+        <xpath expr="//t[@t-foreach='o.order_line']//td[@class='text-center']" position="replace">
             <td class="text-center">
                 <span t-field="line.date_planned" t-options='{"format": "MM/dd/yyyy"}'/>
             </td>
         </xpath>
-        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[1]" position="replace"></xpath>
-        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[1]" position="replace"></xpath>
-        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[1]" position="before">
-            <th>Internal Reference</th>
-            <th>Vendor Code</th>
-            <th>Vendor Product Name</th>
-            <th>Additional Information</th>
+        <xpath expr="//table[@class='table table-sm o_main_table']/thead/tr/th[@name='th_description']"
+               position="replace"/>
+        <xpath expr="//t[@t-foreach='o.order_line']//td[@id='product']" position="replace"/>
+        <xpath expr="//table[@class='table table-sm o_main_table']/thead/tr/th[@name='th_taxes']" position="before">
+            <th name="th_internal_reference"><strong>Internal Reference</strong></th>
+            <th name="th_vendor_code"><strong>Vendor Code</strong></th>
+            <th name="th_vendor_product_name"><strong>Vendor Product Name</strong></th>
+            <th name="th_additional_information"><strong>Additional Information</strong></th>
         </xpath>
-        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[1]" position="before">
+        <xpath expr="//t[@t-foreach='o.order_line']//td[@name='td_taxes']" position="before">
             <t t-set="vendor_info" t-value="line.get_additional_info()"/>
-            <td>
+            <td name="td_internal_reference">
                 <span t-esc="line.product_id.default_code"/>
             </td>
-            <td>
+            <td name="td_vendor_code">
                 <span t-esc="vendor_info['code'] if vendor_info and vendor_info['code'] else ''"/>
             </td>
-            <td>
+            <td name="td_vendor_product_name">
                 <span t-esc="line.name.split(']')[-1]"/>
             </td>
-            <td>
+            <td name="td_additional_information">
                 <span t-esc="vendor_info['additional_info'] if vendor_info and vendor_info['additional_info'] else ''"/>
             </td>
         </xpath>
@@ -34,31 +35,32 @@
 
     <!-- RFQ Modifier for including new fields in report for Vendor Instructions -->
     <template id="report_purchase_rfq_inherit" inherit_id="purchase.report_purchasequotation_document">
-        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[2]" position="replace">
+        <xpath expr="//t[@t-foreach='o.order_line']//td[@class='text-center']" position="replace">
             <td class="text-center">
                 <span t-field="order_line.date_planned" t-options='{"format": "MM/dd/yyyy"}'/>
             </td>
         </xpath>
-        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[1]" position="replace"></xpath>
-        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[1]" position="replace"></xpath>
-        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[1]" position="before">
-            <th>Internal Reference</th>
-            <th>Vendor Code</th>
-            <th>Vendor Product Name</th>
-            <th>Additional Information</th>
+        <xpath expr="//table[@class='table table-sm']/thead/tr/th[@name='th_description']"
+               position="replace"/>
+        <xpath expr="//t[@t-foreach='o.order_line']//td[@id='product']" position="replace"/>
+        <xpath expr="//table[@class='table table-sm']/thead/tr/th[@name='th_expected_date']" position="before">
+            <th name="th_internal_reference"><strong>Internal Reference</strong></th>
+            <th name="th_vendor_code"><strong>Vendor Code</strong></th>
+            <th name="th_vendor_product_name"><strong>Vendor Product Name</strong></th>
+            <th name="th_additional_information"><strong>Additional Information</strong></th>
         </xpath>
-        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[1]" position="before">
+        <xpath expr="//t[@t-foreach='o.order_line']//td[@class='text-center']" position="before">
             <t t-set="vendor_info" t-value="order_line.get_additional_info()"/>
-            <td>
+            <td name="td_internal_reference">
                 <span t-esc="order_line.product_id.default_code"/>
             </td>
-            <td>
+            <td name="td_vendor_code">
                 <span t-esc="vendor_info['code'] if vendor_info and vendor_info['code'] else ''"/>
             </td>
-            <td>
+            <td name="td_vendor_product_name">
                 <span t-esc="order_line.name.split(']')[-1]"/>
             </td>
-            <td>
+            <td name="td_additional_information">
                 <span t-esc="vendor_info['additional_info'] if vendor_info and vendor_info['additional_info'] else ''"/>
             </td>
         </xpath>

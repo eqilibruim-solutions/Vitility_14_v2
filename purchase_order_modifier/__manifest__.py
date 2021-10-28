@@ -12,7 +12,7 @@
     ],
     'data': [
         # 'security/ir.model.access.csv',
-        # 'views/report_purchase_order_modifier.xml',
+        'views/report_purchase_order_modifier.xml',
         'views/purchase_order_modifier.xml',
     ],
 }
