@@ -23,7 +23,7 @@
     'depends': ['theme_impacto'],
     'data': [
         'security/ir.model.access.csv',
-        # 'views/templates.xml',
+        'views/templates.xml',
         'views/views.xml'
         ],
     'installable': True,
